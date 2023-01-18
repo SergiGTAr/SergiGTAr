@@ -7,7 +7,8 @@
   <li>I am always looking for new challenges and opportunities to learn and grow as a developer.</li></ul>
 
 <h2>My Projects</h2>
-<ul><li>AESProject: A social network built with the MEAN Stack.</li>
+<ul><li>AESProject: A social network built with the MEAN Stack.
+  [watch this repo](https://github.com/SergiGTAr/AESProject-Definitivo/subscription)</li>
   <li>Android Racer: A basic videogame built with Kotlin and libktx.</li>
 <li>Noti-ja!: A news application built with Kotlin - Jetpack Compose.</li></ul>
   
