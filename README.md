@@ -17,7 +17,7 @@
   <li>Good level of english.</li></ul>
   
   <h2>Contact Me</h2>
-  <ul><li>Email: sergigarciatarraga@gmail.com</li>
+  <ul><li>Email: mailto:sergigarciatarraga@gmail.com</li>
 <li>LinkedIn: https://www.linkedin.com/in/sergi-garc%C3%ADa-t%C3%A1rraga/</li>
   <li>Portfolio: https://www.sergigtar.dev/</li></ul>
   
