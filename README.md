@@ -1,93 +1,114 @@
 <!--
-  Public profile README — refreshed August 2026.
-  Intentionally free of direct contact details and private identifiers.
+  Public profile README — cybersec edition, August 2026.
+  No email, phone, location, employer, education or private identifiers.
 -->
 
 <div align="center">
 
-<h1><code>SergiGTAr</code></h1>
+<img src="./assets/security-terminal.svg" width="100%" alt="SergiGTAr security terminal — Security-First Software Engineering">
 
-<h3>Software engineering · applied security · useful products</h3>
-
-<p>
-  I turn real-world problems into dependable software — from backend systems and<br>
-  mobile experiences to integrations, automation and the web.
-</p>
+<br>
 
 <a href="https://sergigtar.dev/">
-  <img alt="Explore the portfolio" src="https://img.shields.io/badge/EXPLORE_THE_PORTFOLIO-0B1220?style=for-the-badge&logo=googlechrome&logoColor=4ADE80">
+  <img alt="Enter the portfolio" src="https://img.shields.io/badge/ENTER_PORTFOLIO-07110D?style=for-the-badge&logo=hackthebox&logoColor=54FF93">
 </a>
-<img alt="Profile refreshed August 2026" src="https://img.shields.io/badge/REFRESHED-AUGUST_2026-4ADE80?style=for-the-badge&labelColor=0B1220">
+<a href="https://www.linkedin.com/in/sergigtar">
+  <img alt="Connect on LinkedIn" src="https://img.shields.io/badge/LINKEDIN-CONNECT-07110D?style=for-the-badge&logo=linkedin&logoColor=54FF93">
+</a>
+<img alt="Current focus: cybersecurity" src="https://img.shields.io/badge/CURRENT_FOCUS-CYBERSECURITY-54FF93?style=for-the-badge&labelColor=07110D">
 
 </div>
 
----
+<table>
+  <tr>
+    <td width="68%" valign="top">
+      <h2><code>sergigtar@console:~$ whoami</code></h2>
+      <p>
+        Software engineer moving deeper into cybersecurity, with a
+        <strong>security-first</strong> mindset and a product-aware approach.
+      </p>
+      <p>
+        I care about systems that remain understandable under pressure: clear
+        trust boundaries, secure defaults, useful automation and evidence that
+        another person can reproduce.
+      </p>
+      <p><code>BUILD → HARDEN → VERIFY → IMPROVE</code></p>
+    </td>
+    <td width="32%" align="center" valign="middle">
+      <a href="https://sergigtar.dev/">
+        <img src="https://sergigtar.dev/me-night.webp" width="235" alt="Profile portrait with a dark cyberpunk filter">
+      </a>
+      <br>
+      <sub>visual identity · sergigtar.dev</sub>
+    </td>
+  </tr>
+</table>
 
-### `> profile`
+### `> current_focus`
 
-```yaml
-mindset: security-first
-approach: pragmatic, curious, product-aware
-focus:
-  - backend systems and APIs
-  - mobile and product engineering
-  - integrations and automation
-  - secure-by-design delivery
+```text
+┌─ SECURITY TRACK / 2026
+│
+├─ application security
+├─ secure software architecture
+├─ privacy-aware engineering
+├─ threat-aware development
+├─ defensive automation
+└─ reproducible technical research
 ```
 
-### `> current_focus / 2026`
-
-- Building software where **reliability, maintainability and security** are
-  first-class requirements.
-- Deepening application security, privacy engineering and practical AI-enabled
-  workflows.
-- Contributing high-signal bug reports, reproducible evidence and useful
-  workarounds to open-source projects.
-
-### `> toolbox`
+### `> engineering_core`
 
 <div align="center">
 
-<img alt="C#" src="https://img.shields.io/badge/C%23-0B1220?style=flat-square&logo=dotnet&logoColor=4ADE80">
-<img alt=".NET" src="https://img.shields.io/badge/.NET-0B1220?style=flat-square&logo=dotnet&logoColor=4ADE80">
-<img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-0B1220?style=flat-square&logo=kotlin&logoColor=4ADE80">
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-0B1220?style=flat-square&logo=typescript&logoColor=4ADE80">
-<img alt="Python" src="https://img.shields.io/badge/Python-0B1220?style=flat-square&logo=python&logoColor=4ADE80">
-<img alt="SQL" src="https://img.shields.io/badge/SQL-0B1220?style=flat-square&logo=postgresql&logoColor=4ADE80">
-<br>
-<img alt="Angular" src="https://img.shields.io/badge/Angular-0B1220?style=flat-square&logo=angular&logoColor=4ADE80">
-<img alt="React" src="https://img.shields.io/badge/React-0B1220?style=flat-square&logo=react&logoColor=4ADE80">
-<img alt="Jetpack Compose" src="https://img.shields.io/badge/Jetpack_Compose-0B1220?style=flat-square&logo=jetpackcompose&logoColor=4ADE80">
-<img alt="Azure" src="https://img.shields.io/badge/Azure-0B1220?style=flat-square&logo=microsoftazure&logoColor=4ADE80">
-<img alt="Docker" src="https://img.shields.io/badge/Docker-0B1220?style=flat-square&logo=docker&logoColor=4ADE80">
-<img alt="OWASP" src="https://img.shields.io/badge/OWASP-0B1220?style=flat-square&logo=owasp&logoColor=4ADE80">
+<img alt="OWASP" src="https://img.shields.io/badge/OWASP-07110D?style=flat-square&logo=owasp&logoColor=54FF93">
+<img alt="Python" src="https://img.shields.io/badge/PYTHON-07110D?style=flat-square&logo=python&logoColor=54FF93">
+<img alt="C#" src="https://img.shields.io/badge/C%23-07110D?style=flat-square&logo=dotnet&logoColor=54FF93">
+<img alt=".NET" src="https://img.shields.io/badge/.NET-07110D?style=flat-square&logo=dotnet&logoColor=54FF93">
+<img alt="Kotlin" src="https://img.shields.io/badge/KOTLIN-07110D?style=flat-square&logo=kotlin&logoColor=54FF93">
+<img alt="TypeScript" src="https://img.shields.io/badge/TYPESCRIPT-07110D?style=flat-square&logo=typescript&logoColor=54FF93">
+<img alt="SQL" src="https://img.shields.io/badge/SQL-07110D?style=flat-square&logo=postgresql&logoColor=54FF93">
+<img alt="Docker" src="https://img.shields.io/badge/DOCKER-07110D?style=flat-square&logo=docker&logoColor=54FF93">
+<img alt="Azure" src="https://img.shields.io/badge/AZURE-07110D?style=flat-square&logo=microsoftazure&logoColor=54FF93">
 
 </div>
 
-### `> how_i_build`
+### `> operating_principles`
 
-| 01 · Understand | 02 · Design | 03 · Build | 04 · Harden | 05 · Improve |
-|:--|:--|:--|:--|:--|
-| Find the real constraint | Keep the architecture intentional | Ship the smallest useful slice | Test failure modes and trust boundaries | Observe, learn and iterate |
-
-### `> featured_experience`
-
-<a href="https://sergigtar.dev/"><strong>sergigtar.dev</strong></a> — an
-interactive portfolio designed as a visual world instead of a conventional
-landing page.
+| Signal | Practice |
+|:--|:--|
+| `ASSUME LESS` | Make trust boundaries explicit and keep privileges narrow. |
+| `EVIDENCE > VIBES` | Reproduce, measure and document before drawing conclusions. |
+| `SECURE BY DEFAULT` | Treat security as a design constraint, not a final checklist. |
+| `LEAVE A TRAIL` | Make fixes and workarounds safe for the next person to follow. |
 
 <details>
-<summary><strong>Principles I keep close</strong></summary>
+<summary><strong><code>open_source_protocol.md</code></strong></summary>
 
-- Secure defaults beat security checklists added at the end.
-- Clear interfaces and boring reliability scale better than clever coupling.
-- A useful bug report includes evidence, reproduction steps and a path forward.
-- Good software respects both the person using it and the person maintaining it.
+When I report an issue, I aim to leave maintainers with:
+
+1. A minimal, deterministic reproduction.
+2. Exact observed and expected behaviour.
+3. Sanitised evidence with no credentials or private infrastructure.
+4. A bounded workaround when one is available.
+5. A clear distinction between verified facts and hypotheses.
 
 </details>
 
 ---
 
 <div align="center">
-  <sub>Build with intent · verify with evidence · leave the system better than you found it</sub>
+
+<code>status: learning continuously · building deliberately · disclosing responsibly</code>
+
+<br><br>
+
+<a href="https://sergigtar.dev/"><strong>sergigtar.dev</strong></a>
+&nbsp;·&nbsp;
+<a href="https://www.linkedin.com/in/sergigtar"><strong>LinkedIn</strong></a>
+
+<br><br>
+
+<sub>PUBLIC PROFILE // LAST REFRESH: AUGUST 2026 // NO TRACKERS // NO VIEW COUNTERS</sub>
+
 </div>
