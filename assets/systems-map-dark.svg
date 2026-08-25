@@ -54,7 +54,7 @@
       @keyframes rotate-universal-systems-dark { to { transform:rotate(360deg); } }
       @keyframes glitch-universal-systems-dark { 0%,92%,96%,100% { transform:translate(0); } 93% { transform:translate(2px,-1px); } 94% { transform:translate(-2px,1px); } 95% { transform:translate(1px,0); } }
       @keyframes boot-universal-systems-dark { from { opacity:0; transform:translateX(-10px); } to { opacity:1; transform:translateX(0); } }
-      @media (prefers-reduced-motion: reduce) { .scan-sweep,.pulse,.blink,.flow,.radar-sweep,.glitch,.boot-1,.boot-2,.boot-3,.boot-4 { animation:none!important; opacity:1!important; transform:none!important; } }
+      @media (prefers-reduced-motion: reduce) { .scan-sweep,.pulse,.blink,.flow,.radar-sweep,.glitch,.boot-1,.boot-2,.boot-3,.boot-4 { animation:none!important; opacity:1!important; transform:none!important; } .motion-ball { display:none; } }
     </style>
     
   <rect width="720" height="850" fill="url(#bg-universal-systems-dark)"/><rect width="720" height="850" fill="url(#grid-universal-systems-dark)" opacity=".3"/>

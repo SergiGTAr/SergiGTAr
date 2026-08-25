@@ -112,6 +112,11 @@ def waveform(x0: float, y0: float, width: float, amplitude: float, points: int =
     return " ".join(coords)
 
 
+def wave_path(points: str) -> str:
+    """Convert waveform polyline points into an animateMotion path."""
+    return "M" + points.replace(" ", " L")
+
+
 def svg_defs(p: Palette, uid: str, portrait_uri: str | None = None) -> str:
     portrait = ""
     if portrait_uri:
@@ -172,7 +177,7 @@ def svg_defs(p: Palette, uid: str, portrait_uri: str | None = None) -> str:
       @keyframes rotate-{uid} {{ to {{ transform:rotate(360deg); }} }}
       @keyframes glitch-{uid} {{ 0%,92%,96%,100% {{ transform:translate(0); }} 93% {{ transform:translate(2px,-1px); }} 94% {{ transform:translate(-2px,1px); }} 95% {{ transform:translate(1px,0); }} }}
       @keyframes boot-{uid} {{ from {{ opacity:0; transform:translateX(-10px); }} to {{ opacity:1; transform:translateX(0); }} }}
-      @media (prefers-reduced-motion: reduce) {{ .scan-sweep,.pulse,.blink,.flow,.radar-sweep,.glitch,.boot-1,.boot-2,.boot-3,.boot-4 {{ animation:none!important; opacity:1!important; transform:none!important; }} }}
+      @media (prefers-reduced-motion: reduce) {{ .scan-sweep,.pulse,.blink,.flow,.radar-sweep,.glitch,.boot-1,.boot-2,.boot-3,.boot-4 {{ animation:none!important; opacity:1!important; transform:none!important; }} .motion-ball {{ display:none; }} }}
     </style>
     """
 
@@ -229,7 +234,7 @@ def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
     </g>
   </g>
   <polyline points="{wave}" fill="none" stroke="{p.accent}" stroke-width="2" class="flow"/>
-  <circle r="5" fill="{p.warn}"><animateMotion dur="3s" repeatCount="indefinite" path="M34 695 H684"/></circle>
+  <g class="motion-ball"><circle r="5" fill="{p.warn}"><animateMotion dur="3s" repeatCount="indefinite" path="{wave_path(wave)}"/></circle></g>
   <g class="mono micro"><text x="34" y="731" fill="{p.muted}">VERIFY BEFORE TRUST</text><text x="686" y="731" text-anchor="end" fill="{p.accent}">SERGIGTAR.DEV // ENTER</text></g>
   <rect class="scan-sweep" x="22" y="-30" width="676" height="90" fill="url(#sweep-{uid})" opacity=".45"/>
   <rect width="720" height="760" fill="url(#scan-{uid})" opacity=".25" pointer-events="none"/>
@@ -289,7 +294,7 @@ def universal_footer_svg(p: Palette) -> str:
   {svg_defs(p, uid)}
   <path d="{cut_path(8, 8, 704, 164, 20)}" fill="{p.panel}" stroke="{p.line}" stroke-width="2"/>
   <g class="mono"><text x="34" y="42" class="micro" fill="{p.muted}">PUBLIC PROFILE // STATUS ONLINE</text><text x="34" y="72" font-size="20" font-weight="800" letter-spacing="2" fill="{p.accent}">LEARN · BUILD · HARDEN · SHARE</text></g>
-  <polyline points="{wave}" fill="none" stroke="{p.accent}" stroke-width="2" class="flow"/><circle r="5" fill="{p.warn}"><animateMotion dur="3.2s" repeatCount="indefinite" path="M34 92 H686"/></circle>
+  <polyline points="{wave}" fill="none" stroke="{p.accent}" stroke-width="2" class="flow"/><g class="motion-ball"><circle r="5" fill="{p.warn}"><animateMotion dur="3.2s" repeatCount="indefinite" path="{wave_path(wave)}"/></circle></g>
   <g class="mono"><text x="34" y="135" class="micro" fill="{p.muted}">SANITISED PUBLIC OUTPUT</text><text x="686" y="135" text-anchor="end" font-size="16" font-weight="800" letter-spacing="2" fill="{p.fg}">DISCLOSE RESPONSIBLY</text><text x="686" y="158" text-anchor="end" class="micro" fill="{p.accent}">NO TRACKERS // NO VIEW COUNTERS</text></g>
 </svg>
 """

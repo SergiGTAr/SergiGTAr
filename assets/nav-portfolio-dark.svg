@@ -53,7 +53,7 @@
       @keyframes rotate-universal-nav-portfolio-dark { to { transform:rotate(360deg); } }
       @keyframes glitch-universal-nav-portfolio-dark { 0%,92%,96%,100% { transform:translate(0); } 93% { transform:translate(2px,-1px); } 94% { transform:translate(-2px,1px); } 95% { transform:translate(1px,0); } }
       @keyframes boot-universal-nav-portfolio-dark { from { opacity:0; transform:translateX(-10px); } to { opacity:1; transform:translateX(0); } }
-      @media (prefers-reduced-motion: reduce) { .scan-sweep,.pulse,.blink,.flow,.radar-sweep,.glitch,.boot-1,.boot-2,.boot-3,.boot-4 { animation:none!important; opacity:1!important; transform:none!important; } }
+      @media (prefers-reduced-motion: reduce) { .scan-sweep,.pulse,.blink,.flow,.radar-sweep,.glitch,.boot-1,.boot-2,.boot-3,.boot-4 { animation:none!important; opacity:1!important; transform:none!important; } .motion-ball { display:none; } }
     </style>
     
   <path d="M18,4 H342 L356,18 V102 L342,116 H18 L4,102 V18 Z" fill="#041B0D" stroke="#00FF66" stroke-width="2"/>
