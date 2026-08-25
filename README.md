@@ -38,7 +38,7 @@
     </td>
     <td width="32%" align="center" valign="middle">
       <a href="https://sergigtar.dev/">
-        <img src="https://sergigtar.dev/me-night.webp" width="235" alt="Profile portrait with a dark cyberpunk filter">
+        <img src="./assets/cybersec-avatar.png" width="235" alt="Profile portrait with an emerald cybersec filter">
       </a>
       <br>
       <sub>visual identity · sergigtar.dev</sub>
