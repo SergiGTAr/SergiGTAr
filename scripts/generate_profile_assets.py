@@ -140,6 +140,7 @@ def svg_defs(p: Palette, uid: str, portrait_uri: str | None = None) -> str:
         portrait = (
             f'<clipPath id="portrait-{uid}"><path d="{cut_path(866, 142, 240, 250, 28)}"/></clipPath>'
         )
+    portrait_block = f"      {portrait}\n" if portrait else ""
     return f"""
     <defs>
       <linearGradient id="bg-{uid}" x1="0" y1="0" x2="1" y2="1">
@@ -170,8 +171,7 @@ def svg_defs(p: Palette, uid: str, portrait_uri: str | None = None) -> str:
       <filter id="soft-{uid}" x="-20%" y="-20%" width="140%" height="140%">
         <feGaussianBlur stdDeviation="1.4"/>
       </filter>
-      {portrait}
-    </defs>
+{portrait_block}    </defs>
     <style>
       .mono {{ font-family: Consolas, "SFMono-Regular", Menlo, monospace; }}
       .label {{ font-size: 15px; font-weight: 700; letter-spacing: 3px; }}
@@ -278,14 +278,14 @@ def hero_svg(p: Palette, portrait_uri: str) -> str:
 """
 
 
-def mobile_hero_svg(p: Palette, portrait_uri: str) -> str:
-    uid = f"mobile-hero-{p.name}"
+def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
+    uid = f"universal-hero-{p.name}"
     security_size = fitted_size("SECURITY-FIRST", 405, 53)
     engineering_size = fitted_size("ENGINEERING", 405, 64)
     wave = waveform(34, 695, 650, 12, 130)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="760" viewBox="0 0 720 760" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">SergiGTAr mobile tactical security terminal</title>
-  <desc id="desc-{uid}">Mobile Pip-Boy inspired profile terminal with operator portrait, security-first engineering mission and live system modules.</desc>
+  <title id="title-{uid}">SergiGTAr tactical security terminal</title>
+  <desc id="desc-{uid}">Responsive Pip-Boy inspired profile terminal with operator portrait, security-first engineering mission and live system modules.</desc>
   {svg_defs(p, uid)}
   <defs><clipPath id="portrait-{uid}"><path d="{cut_path(487, 87, 188, 207, 22)}"/></clipPath></defs>
   <rect width="720" height="760" fill="url(#bg-{uid})"/>
@@ -294,7 +294,7 @@ def mobile_hero_svg(p: Palette, portrait_uri: str) -> str:
   <path d="{cut_path(22, 22, 676, 716, 18)}" fill="none" stroke="{p.line}" stroke-width="1.5"/>
   <path d="M22 62H698M22 330H698M22 650H698" stroke="{p.line}"/>
   <g class="mono">
-    <text x="36" y="44" class="label" fill="{p.accent}">◆ SERGIGTAR OS // MOBILE NODE</text>
+    <text x="36" y="44" class="label" fill="{p.accent}">◆ SERGIGTAR OS // PUBLIC NODE</text>
     <text x="684" y="44" text-anchor="end" class="micro" fill="{p.muted}">AUG.2026</text>
     <text x="38" y="96" class="micro" fill="{p.warn}">SYS://SECURITY_OPERATOR</text>
     <text x="34" y="157" fill="{p.fg}" font-size="{security_size}" font-weight="800" letter-spacing="1">SECURITY-FIRST</text>
@@ -338,15 +338,15 @@ def mobile_hero_svg(p: Palette, portrait_uri: str) -> str:
 """
 
 
-def mobile_systems_svg(p: Palette) -> str:
-    uid = f"mobile-systems-{p.name}"
+def universal_systems_svg(p: Palette) -> str:
+    uid = f"universal-systems-{p.name}"
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="850" viewBox="0 0 720 850" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">SergiGTAr mobile active system map</title>
-  <desc id="desc-{uid}">Large mobile readout of cybersecurity focus, engineering tools and the responsible open-source protocol.</desc>
+  <title id="title-{uid}">SergiGTAr active system map</title>
+  <desc id="desc-{uid}">Responsive readout of cybersecurity focus, engineering tools and the responsible open-source protocol.</desc>
   {svg_defs(p, uid)}
   <rect width="720" height="850" fill="url(#bg-{uid})"/><rect width="720" height="850" fill="url(#grid-{uid})" opacity=".3"/>
   <path d="{cut_path(8, 8, 704, 834, 24)}" fill="none" stroke="{p.accent}" stroke-width="3"/>
-  <g class="mono"><text x="32" y="52" class="label" fill="{p.accent}">◆ ACTIVE MODULES // MOBILE MAP</text><text x="688" y="52" text-anchor="end" class="micro" fill="{p.muted}">03 ONLINE</text></g>
+  <g class="mono"><text x="32" y="52" class="label" fill="{p.accent}">◆ ACTIVE MODULES // SYSTEM MAP</text><text x="688" y="52" text-anchor="end" class="micro" fill="{p.muted}">03 ONLINE</text></g>
   <g>
     <path d="{cut_path(24, 76, 672, 226, 18)}" fill="{p.panel}" stroke="{p.line}" stroke-width="1.5"/>
     <path d="{cut_path(24, 318, 672, 226, 18)}" fill="{p.panel}" stroke="{p.line}" stroke-width="1.5"/>
@@ -453,11 +453,11 @@ def nav_svg(p: Palette, kind: str, code: str, title: str, subtitle: str) -> str:
 """
 
 
-def mobile_nav_svg(p: Palette, kind: str, code: str, title: str) -> str:
-    uid = f"mobile-nav-{kind}-{p.name}"
+def universal_nav_svg(p: Palette, kind: str, code: str, title: str) -> str:
+    uid = f"universal-nav-{kind}-{p.name}"
     glyph = {"portfolio": "⌁", "linkedin": "in", "orcid": "iD"}[kind]
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="360" height="120" viewBox="0 0 360 120" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">{esc(title)}</title><desc id="desc-{uid}">Mobile navigation control for {esc(title)}.</desc>
+  <title id="title-{uid}">{esc(title)}</title><desc id="desc-{uid}">Responsive navigation control for {esc(title)}.</desc>
   {svg_defs(p, uid)}
   <path d="{cut_path(4, 4, 352, 112, 14)}" fill="{p.panel}" stroke="{p.accent}" stroke-width="2"/>
   <circle cx="56" cy="60" r="31" fill="none" stroke="{p.line}" stroke-width="2"/><text x="56" y="70" text-anchor="middle" class="mono" font-size="27" font-weight="800" fill="{p.accent}">{glyph}</text>
@@ -483,11 +483,11 @@ def footer_svg(p: Palette) -> str:
 """
 
 
-def mobile_footer_svg(p: Palette) -> str:
-    uid = f"mobile-footer-{p.name}"
+def universal_footer_svg(p: Palette) -> str:
+    uid = f"universal-footer-{p.name}"
     wave = waveform(34, 92, 652, 11, 130)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="180" viewBox="0 0 720 180" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">SergiGTAr mobile profile status</title><desc id="desc-{uid}">Public profile online: learn, build, harden, share and disclose responsibly.</desc>
+  <title id="title-{uid}">SergiGTAr public profile status</title><desc id="desc-{uid}">Public profile online: learn, build, harden, share and disclose responsibly.</desc>
   {svg_defs(p, uid)}
   <path d="{cut_path(8, 8, 704, 164, 20)}" fill="{p.panel}" stroke="{p.line}" stroke-width="2"/>
   <g class="mono"><text x="34" y="42" class="micro" fill="{p.muted}">PUBLIC PROFILE // STATUS ONLINE</text><text x="34" y="72" font-size="20" font-weight="800" letter-spacing="2" fill="{p.accent}">LEARN · BUILD · HARDEN · SHARE</text></g>
@@ -520,18 +520,15 @@ def main() -> None:
     portrait_uri = avatar_data_uri()
     generated: dict[str, str] = {}
     for palette in (DARK, LIGHT):
-        generated[f"pipboy-terminal-{palette.name}.svg"] = hero_svg(palette, portrait_uri)
-        generated[f"pipboy-terminal-mobile-{palette.name}.svg"] = mobile_hero_svg(palette, portrait_uri)
-        generated[f"systems-map-{palette.name}.svg"] = systems_svg(palette)
-        generated[f"systems-map-mobile-{palette.name}.svg"] = mobile_systems_svg(palette)
-        generated[f"nav-portfolio-{palette.name}.svg"] = nav_svg(palette, "portfolio", "UPLINK // 01", "ENTER PORTFOLIO", "SERGIGTAR.DEV")
-        generated[f"nav-linkedin-{palette.name}.svg"] = nav_svg(palette, "linkedin", "CHANNEL // 02", "PROFESSIONAL LINK", "LINKEDIN")
-        generated[f"nav-orcid-{palette.name}.svg"] = nav_svg(palette, "orcid", "IDENTITY // 03", "RESEARCH ID", "ORCID")
-        generated[f"nav-portfolio-mobile-{palette.name}.svg"] = mobile_nav_svg(palette, "portfolio", "UPLINK // 01", "PORTFOLIO")
-        generated[f"nav-linkedin-mobile-{palette.name}.svg"] = mobile_nav_svg(palette, "linkedin", "CHANNEL // 02", "LINKEDIN")
-        generated[f"nav-orcid-mobile-{palette.name}.svg"] = mobile_nav_svg(palette, "orcid", "IDENTITY // 03", "ORCID")
-        generated[f"footer-status-{palette.name}.svg"] = footer_svg(palette)
-        generated[f"footer-status-mobile-{palette.name}.svg"] = mobile_footer_svg(palette)
+        # GitHub's live themed-picture element preserves colour-scheme sources but
+        # discards width conditions. A single tall composition therefore scales
+        # reliably in both the desktop README column and the mobile profile view.
+        generated[f"pipboy-terminal-{palette.name}.svg"] = universal_hero_svg(palette, portrait_uri)
+        generated[f"systems-map-{palette.name}.svg"] = universal_systems_svg(palette)
+        generated[f"nav-portfolio-{palette.name}.svg"] = universal_nav_svg(palette, "portfolio", "UPLINK // 01", "PORTFOLIO")
+        generated[f"nav-linkedin-{palette.name}.svg"] = universal_nav_svg(palette, "linkedin", "CHANNEL // 02", "LINKEDIN")
+        generated[f"nav-orcid-{palette.name}.svg"] = universal_nav_svg(palette, "orcid", "IDENTITY // 03", "ORCID")
+        generated[f"footer-status-{palette.name}.svg"] = universal_footer_svg(palette)
 
     for name, contents in generated.items():
         (ASSETS / name).write_text(contents, encoding="utf-8", newline="\n")
