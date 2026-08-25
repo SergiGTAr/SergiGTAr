@@ -87,5 +87,5 @@ When I report an issue, I aim to leave maintainers with:
 </picture>
 
 <p align="center">
-  <sub><code>SERGIGTAR OS // PUBLIC NODE // LAST REFRESH: AUGUST 2026</code></sub>
+  <sub><code>SERGIGTAR OS // PUBLIC NODE // LAST REFRESH: AUGUST 25, 2026</code></sub>
 </p>

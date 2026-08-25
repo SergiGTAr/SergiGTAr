@@ -7,8 +7,9 @@ import base64
 import io
 import json
 import math
-import random
+import re
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -18,9 +19,11 @@ from PIL import Image, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
 AVATAR = ASSETS / "cybersec-avatar.png"
-WIDTH = 1200
-MONO = Path("C:/Windows/Fonts/consola.ttf")
 MONO_BOLD = Path("C:/Windows/Fonts/consolab.ttf")
+
+NOW = datetime.now()
+MONTH_TAG = f"{NOW.strftime('%b').upper()}.{NOW.year}"
+REFRESH_TAG = f"{NOW.strftime('%B').upper()} {NOW.day}, {NOW.year}"
 
 
 @dataclass(frozen=True)
@@ -95,17 +98,6 @@ def avatar_data_uri() -> str:
     return "data:image/jpeg;base64," + base64.b64encode(output.getvalue()).decode("ascii")
 
 
-def texture_points(seed: int, count: int, width: int, height: int, color: str) -> str:
-    rng = random.Random(seed)
-    points = []
-    for _ in range(count):
-        x, y = rng.randrange(width), rng.randrange(height)
-        radius = rng.choice((0.45, 0.55, 0.7, 0.9))
-        opacity = rng.uniform(0.08, 0.30)
-        points.append(f'<circle cx="{x}" cy="{y}" r="{radius}" fill="{color}" opacity="{opacity:.2f}"/>')
-    return "".join(points)
-
-
 def waveform(x0: float, y0: float, width: float, amplitude: float, points: int = 180) -> str:
     coords = []
     for index in range(points):
@@ -118,20 +110,6 @@ def waveform(x0: float, y0: float, width: float, amplitude: float, points: int =
         )
         coords.append(f"{x0 + t * width:.1f},{y0 + signal * amplitude * envelope:.1f}")
     return " ".join(coords)
-
-
-def ticks(cx: float, cy: float, r1: float, r2: float, count: int, color: str) -> str:
-    lines = []
-    for i in range(count):
-        angle = math.tau * i / count - math.pi / 2
-        a = (cx + math.cos(angle) * r1, cy + math.sin(angle) * r1)
-        b = (cx + math.cos(angle) * r2, cy + math.sin(angle) * r2)
-        opacity = 0.85 if i % 4 == 0 else 0.35
-        lines.append(
-            f'<line x1="{a[0]:.2f}" y1="{a[1]:.2f}" x2="{b[0]:.2f}" y2="{b[1]:.2f}" '
-            f'stroke="{color}" stroke-width="{2 if i % 4 == 0 else 1}" opacity="{opacity}"/>'
-        )
-    return "".join(lines)
 
 
 def svg_defs(p: Palette, uid: str, portrait_uri: str | None = None) -> str:
@@ -199,85 +177,6 @@ def svg_defs(p: Palette, uid: str, portrait_uri: str | None = None) -> str:
     """
 
 
-def hero_svg(p: Palette, portrait_uri: str) -> str:
-    uid = f"hero-{p.name}"
-    security_size = fitted_size("SECURITY-FIRST", 760, 77)
-    engineering_size = fitted_size("ENGINEERING", 760, 92)
-    frame = cut_path(8, 8, 1184, 604, 30)
-    inner = cut_path(27, 27, 1146, 566, 22)
-    wave = waveform(60, 548, 760, 10)
-    particles = texture_points(20260825, 115, 1200, 620, p.accent)
-    tick_marks = ticks(986, 268, 142, 152, 48, p.accent)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">SergiGTAr tactical security engineering terminal</title>
-  <desc id="desc-{uid}">Pip-Boy inspired public profile terminal for a security-first software engineer, with operator portrait, secure engineering principles and a portfolio uplink.</desc>
-  {svg_defs(p, uid, portrait_uri)}
-  <rect width="1200" height="620" fill="url(#bg-{uid})"/>
-  <rect width="1200" height="620" fill="url(#grid-{uid})" opacity=".46"/>
-  <g>{particles}</g>
-  <path d="{frame}" fill="{p.panel}" stroke="{p.accent}" stroke-width="3"/>
-  <path d="{inner}" fill="none" stroke="{p.line}" stroke-width="1.5" opacity=".85"/>
-  <path d="M28 72H1172 M28 492H1172" stroke="{p.line}" stroke-width="1.5"/>
-  <path d="M54 83H784V468H54Z" fill="{p.bg}" fill-opacity=".58" stroke="{p.line}"/>
-  <path d="{cut_path(804, 83, 342, 385, 18)}" fill="url(#radar-{uid})" stroke="{p.line}" stroke-width="1.5"/>
-  <g class="mono label" fill="{p.accent}">
-    <text x="56" y="55">◆ SERGIGTAR OS // TACTICAL SECURITY TERMINAL</text>
-    <text x="1144" y="55" text-anchor="end">PUBLIC NODE · AUG.2026</text>
-  </g>
-  <g class="mono">
-    <text x="78" y="117" fill="{p.warn}" class="label">SYS://OPERATOR_PROFILE</text>
-    <text x="78" y="151" fill="{p.muted}" class="micro">IDENTITY VERIFIED // UPLINK STABLE // MODE: SECURITY-FIRST</text>
-    <text x="72" y="226" fill="{p.fg}" font-size="{security_size}" font-weight="800" letter-spacing="2">SECURITY-FIRST</text>
-    <text x="72" y="310" fill="{p.accent}" font-size="{engineering_size}" font-weight="800" letter-spacing="6" filter="url(#glow-{uid})" class="glitch">ENGINEERING</text>
-    <path d="M76 329H748" stroke="{p.accent}" stroke-width="3"/>
-    <path d="M76 336H426" stroke="{p.line}"/>
-    <g class="body">
-      <g class="boot-1"><text x="78" y="374" fill="{p.accent}">[OK]</text><text x="132" y="374" fill="{p.fg}">trust boundaries mapped</text></g>
-      <g class="boot-2"><text x="78" y="405" fill="{p.accent}">[OK]</text><text x="132" y="405" fill="{p.fg}">secure defaults armed</text></g>
-      <g class="boot-3"><text x="78" y="436" fill="{p.accent}">[OK]</text><text x="132" y="436" fill="{p.fg}">evidence pipeline live</text></g>
-      <text x="438" y="374" fill="{p.muted}">APPSEC</text><text x="548" y="374" fill="{p.accent}">ACTIVE</text>
-      <text x="438" y="405" fill="{p.muted}">PRIVACY</text><text x="548" y="405" fill="{p.accent}">ENFORCED</text>
-      <text x="438" y="436" fill="{p.muted}">RESEARCH</text><text x="548" y="436" fill="{p.warn}">ONGOING</text>
-      <g class="boot-4"><text x="78" y="463" fill="{p.fg}">&gt; build --harden --verify</text><rect class="blink" x="350" y="447" width="11" height="20" fill="{p.accent}"/></g>
-    </g>
-  </g>
-  <g>
-    <circle cx="986" cy="268" r="157" fill="none" stroke="{p.grid}" stroke-width="1"/>
-    <circle class="pulse" cx="986" cy="268" r="142" fill="none" stroke="{p.accent}" stroke-width="2" opacity=".5"/>
-    {tick_marks}
-    <path d="M826 268H1146M986 108V428" stroke="{p.line}" opacity=".45"/>
-    <path d="M843 176L1128 360M843 360L1128 176" stroke="{p.grid}" opacity=".38"/>
-    <g class="radar-sweep" opacity=".65">
-      <path d="M986 268L986 116A152 152 0 0 1 1093 160Z" fill="{p.accent}" opacity=".10"/>
-      <path d="M986 268L986 116" stroke="{p.accent}" stroke-width="2" filter="url(#glow-{uid})"/>
-    </g>
-    <image href="{portrait_uri}" x="858" y="134" width="256" height="256" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-{uid})"/>
-    <path d="{cut_path(866, 142, 240, 250, 28)}" fill="none" stroke="{p.accent}" stroke-width="3"/>
-    <path d="{cut_path(877, 153, 218, 228, 20)}" fill="none" stroke="{p.accent2}" stroke-width="1" opacity=".75"/>
-    <rect x="866" y="142" width="240" height="250" fill="url(#scan-{uid})" clip-path="url(#portrait-{uid})" opacity=".5"/>
-    <g class="mono" text-anchor="middle">
-      <text x="986" y="420" class="label" fill="{p.fg}">SERGIGTAR // SGT-08</text>
-      <text x="986" y="444" class="micro" fill="{p.accent}">OPERATOR LINK: AUTHENTICATED</text>
-    </g>
-  </g>
-  <g class="mono">
-    <polyline points="{wave}" fill="none" stroke="{p.accent}" stroke-width="2" class="flow"/>
-    <circle r="4" fill="{p.warn}" filter="url(#glow-{uid})"><animateMotion dur="3.2s" repeatCount="indefinite" path="M60 548 H812"/></circle>
-    <text x="838" y="531" class="micro" fill="{p.muted}">PORTFOLIO UPLINK</text>
-    <text x="838" y="557" class="label" fill="{p.accent}">SERGIGTAR.DEV</text>
-    <text x="1140" y="531" text-anchor="end" class="micro" fill="{p.muted}">CHANNEL</text>
-    <text x="1140" y="557" text-anchor="end" font-size="13" font-weight="700" letter-spacing="2" fill="{p.warn}">OPEN // ENTER</text>
-    <text x="56" y="596" class="micro" fill="{p.muted}">VERIFY BEFORE TRUST</text>
-    <text x="600" y="596" text-anchor="middle" class="micro" fill="{p.accent}">セキュリティ端末 // SECURITY CONSOLE</text>
-    <text x="1144" y="596" text-anchor="end" class="micro" fill="{p.muted}">NO TRACKERS · NO VIEW COUNTERS</text>
-  </g>
-  <rect class="scan-sweep" x="28" y="0" width="1144" height="90" fill="url(#sweep-{uid})" opacity=".5" pointer-events="none"/>
-  <rect width="1200" height="620" fill="url(#scan-{uid})" opacity=".30" pointer-events="none"/>
-  <g fill="{p.accent}"><circle cx="32" cy="32" r="4"/><circle cx="1168" cy="32" r="4"/><circle cx="32" cy="588" r="4"/><circle cx="1168" cy="588" r="4"/></g>
-</svg>
-"""
-
-
 def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
     uid = f"universal-hero-{p.name}"
     security_size = fitted_size("SECURITY-FIRST", 405, 53)
@@ -295,7 +194,7 @@ def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
   <path d="M22 62H698M22 330H698M22 650H698" stroke="{p.line}"/>
   <g class="mono">
     <text x="36" y="44" class="label" fill="{p.accent}">◆ SERGIGTAR OS // PUBLIC NODE</text>
-    <text x="684" y="44" text-anchor="end" class="micro" fill="{p.muted}">AUG.2026</text>
+    <text x="684" y="44" text-anchor="end" class="micro" fill="{p.muted}">{MONTH_TAG}</text>
     <text x="38" y="96" class="micro" fill="{p.warn}">SYS://SECURITY_OPERATOR</text>
     <text x="34" y="157" fill="{p.fg}" font-size="{security_size}" font-weight="800" letter-spacing="1">SECURITY-FIRST</text>
     <text x="34" y="220" fill="{p.accent}" font-size="{engineering_size}" font-weight="800" letter-spacing="2" class="glitch" filter="url(#glow-{uid})">ENGINEERING</text>
@@ -307,7 +206,7 @@ def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
   </g>
   <g>
     <circle cx="581" cy="190" r="110" fill="url(#radar-{uid})" stroke="{p.grid}"/>
-    <g class="radar-sweep"><path d="M581 190L581 76A114 114 0 0 1 662 109Z" fill="{p.accent}" opacity=".12"/><path d="M581 190V76" stroke="{p.accent}" stroke-width="2"/></g>
+    <g class="radar-sweep" style="transform-box: view-box; transform-origin: 581px 190px"><path d="M581 190L581 76A114 114 0 0 1 662 109Z" fill="{p.accent}" opacity=".12"/><path d="M581 190V76" stroke="{p.accent}" stroke-width="2"/></g>
     <image href="{portrait_uri}" x="480" y="80" width="202" height="222" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait-{uid})"/>
     <path d="{cut_path(487, 87, 188, 207, 22)}" fill="none" stroke="{p.accent}" stroke-width="3"/>
     <path d="M581 72V308M463 190H699" stroke="{p.line}" opacity=".38"/>
@@ -326,7 +225,7 @@ def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
       <text x="55" y="588" fill="{p.fg}" font-size="20">&gt; build --harden --verify</text>
       <rect class="blink" x="356" y="568" width="12" height="22" fill="{p.accent}"/>
       <text x="656" y="550" text-anchor="end" class="micro" fill="{p.muted}">OPERATOR</text>
-      <text x="656" y="588" text-anchor="end" fill="{p.accent}" font-size="18">SGT-08 // AUTH</text>
+      <text x="656" y="588" text-anchor="end" fill="{p.accent}" font-size="18">SGT-06 // AUTH</text>
     </g>
   </g>
   <polyline points="{wave}" fill="none" stroke="{p.accent}" stroke-width="2" class="flow"/>
@@ -367,92 +266,6 @@ def universal_systems_svg(p: Palette) -> str:
 """
 
 
-def systems_svg(p: Palette) -> str:
-    uid = f"systems-{p.name}"
-    panels = [(30, 86, 352, 260), (424, 86, 352, 260), (818, 86, 352, 260)]
-    particles = texture_points(20260826, 52, 1200, 400, p.accent)
-    panel_markup = "".join(
-        f'<path d="{cut_path(x, y, w, h, 18)}" fill="{p.panel}" fill-opacity=".88" stroke="{p.line}" stroke-width="1.5"/>'
-        for x, y, w, h in panels
-    )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">SergiGTAr active security and engineering system map</title>
-  <desc id="desc-{uid}">Three terminal modules showing cybersecurity focus areas, engineering tools and a reproducible open-source protocol.</desc>
-  {svg_defs(p, uid)}
-  <rect width="1200" height="400" fill="url(#bg-{uid})"/>
-  <rect width="1200" height="400" fill="url(#grid-{uid})" opacity=".34"/>
-  <g>{particles}</g>
-  <path d="{cut_path(8, 8, 1184, 384, 26)}" fill="none" stroke="{p.accent}" stroke-width="2"/>
-  <g class="mono">
-    <text x="36" y="54" class="label" fill="{p.accent}">◆ ACTIVE MODULES // SYSTEM MAP</text>
-    <text x="1164" y="54" text-anchor="end" class="micro" fill="{p.muted}">3 MODULES ONLINE · READ-ONLY PUBLIC OUTPUT</text>
-  </g>
-  {panel_markup}
-  <g class="mono">
-    <text x="55" y="120" class="label" fill="{p.warn}">01 // SECURITY TRACK</text>
-    <text x="55" y="153" class="micro" fill="{p.muted}">CURRENT VECTOR</text>
-    <g class="body" fill="{p.fg}">
-      <text x="55" y="190">◆ application security</text>
-      <text x="55" y="224">◆ secure architecture</text>
-      <text x="55" y="258">◆ privacy-aware engineering</text>
-      <text x="55" y="292">◆ defensive automation</text>
-      <text x="55" y="326">◆ reproducible research</text>
-    </g>
-
-    <text x="449" y="120" class="label" fill="{p.warn}">02 // ENGINEERING CORE</text>
-    <text x="449" y="153" class="micro" fill="{p.muted}">INTEROPERABLE TOOLCHAIN</text>
-    <g class="body">
-      <text x="449" y="194" fill="{p.accent}">.NET / C#</text><text x="615" y="194" fill="{p.fg}">PYTHON</text>
-      <text x="449" y="236" fill="{p.fg}">TYPESCRIPT</text><text x="615" y="236" fill="{p.accent}">KOTLIN</text>
-      <text x="449" y="278" fill="{p.accent}">SQL</text><text x="615" y="278" fill="{p.fg}">DOCKER</text>
-      <text x="449" y="320" fill="{p.fg}">AZURE</text><text x="615" y="320" fill="{p.accent}">OWASP</text>
-    </g>
-    <g stroke="{p.line}" opacity=".65"><path d="M449 207H738M449 249H738M449 291H738"/></g>
-
-    <text x="843" y="120" class="label" fill="{p.warn}">03 // OSS PROTOCOL</text>
-    <text x="843" y="153" class="micro" fill="{p.muted}">LEAVE A SAFE TRAIL</text>
-    <g class="body">
-      <text x="843" y="194" fill="{p.accent}">01</text><text x="890" y="194" fill="{p.fg}">REPRODUCE</text>
-      <text x="843" y="236" fill="{p.accent}">02</text><text x="890" y="236" fill="{p.fg}">SANITISE</text>
-      <text x="843" y="278" fill="{p.accent}">03</text><text x="890" y="278" fill="{p.fg}">DOCUMENT</text>
-      <text x="843" y="320" fill="{p.accent}">04</text><text x="890" y="320" fill="{p.fg}">IMPROVE</text>
-    </g>
-    <path d="M1058 186V314" stroke="{p.line}" stroke-width="2" class="flow"/>
-    <g fill="{p.accent}"><circle cx="1058" cy="190" r="5"/><circle cx="1058" cy="232" r="5"/><circle cx="1058" cy="274" r="5"/><circle cx="1058" cy="316" r="5"/></g>
-  </g>
-  <g class="mono micro">
-    <text x="34" y="375" fill="{p.muted}">ASSUME LESS</text>
-    <text x="426" y="375" fill="{p.muted}">EVIDENCE &gt; VIBES</text>
-    <text x="779" y="375" fill="{p.muted}">SECURE BY DEFAULT</text>
-    <text x="1164" y="375" text-anchor="end" fill="{p.accent}">BUILD → HARDEN → VERIFY → IMPROVE</text>
-  </g>
-  <rect class="scan-sweep" x="10" y="-40" width="1180" height="70" fill="url(#sweep-{uid})" opacity=".35" pointer-events="none"/>
-  <rect width="1200" height="400" fill="url(#scan-{uid})" opacity=".22" pointer-events="none"/>
-</svg>
-"""
-
-
-def nav_svg(p: Palette, kind: str, code: str, title: str, subtitle: str) -> str:
-    uid = f"nav-{kind}-{p.name}"
-    frame = cut_path(3, 3, 354, 86, 12)
-    if kind == "portfolio":
-        icon = f'<path d="M31 26L53 15 75 26V58L53 69 31 58Z" fill="none" stroke="{p.accent}" stroke-width="2"/><path d="M43 34L53 44 63 34M53 44V57" fill="none" stroke="{p.accent2}" stroke-width="2"/>'
-    elif kind == "linkedin":
-        icon = f'<circle cx="53" cy="25" r="6" fill="{p.accent}"/><path d="M47 39V67M60 67V48C60 38 75 38 75 50V67M32 39V67" fill="none" stroke="{p.accent}" stroke-width="4"/>'
-    else:
-        icon = f'<circle cx="53" cy="43" r="27" fill="none" stroke="{p.accent}" stroke-width="2"/><text x="53" y="50" text-anchor="middle" class="mono" font-size="19" font-weight="800" fill="{p.accent}">iD</text>'
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="360" height="92" viewBox="0 0 360 92" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">{esc(title)}</title><desc id="desc-{uid}">{esc(subtitle)}</desc>
-  {svg_defs(p, uid)}
-  <path d="{frame}" fill="{p.panel}" stroke="{p.line}" stroke-width="1.5"/>
-  <path d="M91 13V79" stroke="{p.grid}"/>{icon}
-  <g class="mono"><text x="109" y="31" class="micro" fill="{p.muted}">{esc(code)}</text><text x="109" y="55" font-size="18" font-weight="800" letter-spacing="1" fill="{p.fg}">{esc(title)}</text><text x="109" y="74" font-size="11" letter-spacing="1" fill="{p.accent}">{esc(subtitle)}</text></g>
-  <path d="M318 34L332 46 318 58" fill="none" stroke="{p.accent}" stroke-width="2" class="pulse"/>
-  <path d="{frame}" fill="none" stroke="{p.accent}" stroke-width="2" stroke-dasharray="70 300" class="flow"/>
-</svg>
-"""
-
-
 def universal_nav_svg(p: Palette, kind: str, code: str, title: str) -> str:
     uid = f"universal-nav-{kind}-{p.name}"
     glyph = {"portfolio": "⌁", "linkedin": "in", "orcid": "iD"}[kind]
@@ -464,21 +277,6 @@ def universal_nav_svg(p: Palette, kind: str, code: str, title: str) -> str:
   <g class="mono"><text x="102" y="43" class="micro" fill="{p.muted}">{esc(code)}</text><text x="102" y="78" font-size="25" font-weight="800" letter-spacing="1" fill="{p.fg}">{esc(title)}</text></g>
   <path d="M323 46L338 60 323 74" fill="none" stroke="{p.accent}" stroke-width="3" class="pulse"/>
   <path d="{cut_path(4, 4, 352, 112, 14)}" fill="none" stroke="{p.accent2}" stroke-width="2" stroke-dasharray="60 320" class="flow"/>
-</svg>
-"""
-
-
-def footer_svg(p: Palette) -> str:
-    uid = f"footer-{p.name}"
-    wave = waveform(420, 45, 360, 8, 110)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="112" viewBox="0 0 1200 112" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">SergiGTAr public profile status</title><desc id="desc-{uid}">Learning continuously, building deliberately and disclosing responsibly.</desc>
-  {svg_defs(p, uid)}
-  <path d="{cut_path(8, 8, 1184, 96, 20)}" fill="{p.panel}" stroke="{p.line}" stroke-width="1.5"/>
-  <g class="mono"><text x="38" y="39" class="micro" fill="{p.muted}">PUBLIC PROFILE // SANITISED OUTPUT</text><text x="38" y="70" class="label" fill="{p.accent}">LEARN · BUILD · HARDEN · SHARE</text></g>
-  <polyline points="{wave}" fill="none" stroke="{p.accent}" stroke-width="2" class="flow"/>
-  <g class="mono" text-anchor="end"><text x="1162" y="39" class="micro" fill="{p.muted}">STATUS // ONLINE</text><text x="1162" y="70" class="label" fill="{p.fg}">DISCLOSE RESPONSIBLY</text></g>
-  <circle class="pulse" cx="810" cy="54" r="7" fill="{p.accent}"/>
 </svg>
 """
 
@@ -532,6 +330,12 @@ def main() -> None:
 
     for name, contents in generated.items():
         (ASSETS / name).write_text(contents, encoding="utf-8", newline="\n")
+
+    readme = ROOT / "README.md"
+    text = readme.read_text(encoding="utf-8")
+    updated = re.sub(r"LAST REFRESH: [A-Z]+(?: \d{1,2},)? \d{4}", f"LAST REFRESH: {REFRESH_TAG}", text)
+    if updated != text:
+        readme.write_text(updated, encoding="utf-8", newline="\n")
 
     metrics = {
         "palette_contrast": {
