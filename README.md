@@ -5,7 +5,9 @@
 
 <div align="center">
 
-<img src="./assets/security-terminal.svg" width="100%" alt="SergiGTAr security terminal — Security-First Software Engineering">
+<a href="https://sergigtar.dev/">
+  <img src="./assets/security-terminal.svg" width="100%" alt="SergiGTAr security terminal — Security-First Software Engineering">
+</a>
 
 <br>
 
