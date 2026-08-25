@@ -1,38 +1,93 @@
-<h1>Welcome to my GitHub profile! 😊</h1>
+<!--
+  Public profile README — refreshed August 2026.
+  Intentionally free of direct contact details and private identifiers.
+-->
 
-<h2>About Me</h2>
+<div align="center">
 
-<ul><li>I am Sergi García Tárraga, a passionate developer with a strong background in Java, Kotlin, SQL, C# and Python.</li>
-<li>I have experience working on a variety of projects, including AESProject, a social network built with the MEAN Stack, Android Racer, a basic videogame built with Kotlin and libktx, and Noti-ja!, a news application built with Kotlin - Jetpack Compose.</li>
-  <li>I am always looking for new challenges and opportunities to learn and grow as a developer.</li></ul>
+<h1><code>SergiGTAr</code></h1>
 
-<h2>My Projects</h2>
-<ul><li>AESProject: A social network built with the MEAN Stack.
-  [watch this repo](https://github.com/SergiGTAr/AESProject-Definitivo/subscription)</li>
-  <li>Android Racer: A basic videogame built with Kotlin and libktx.</li>
-<li>Noti-ja!: A news application built with Kotlin - Jetpack Compose.</li></ul>
-  
-  <h2>Skills</h2>
-<ul><li>Proficient in Java, Kotlin, SQL, C#, Python, MongoDB, JavaScript, Angular, ExpressJS, and Node.</li>
-  <li>Strong understanding of problem-solving and a very autodidact person.</li>
-  <li>Good level of english.</li></ul>
-  
-  <h2>Contact Me</h2>
-  <ul><li>Email: sergigarciatarraga@gmail.com</li>
-<li>LinkedIn: www.linkedin.com/in/sergi-garcía-tárraga</li>
-  <li>Portfolio: https://www.sergigtar.dev/</li></ul>
-  
-Thank you for visiting my profile! I look forward to connecting with other developers and contributing to the open-source community.
+<h3>Software engineering · applied security · useful products</h3>
 
-<h2>How to use my projects</h2>
-<ul><li>AESProject: Clone the repository, and run the command npm install in the root directory to install all the dependencies. Once that's done, you can start the application by running the command npm start.</li>
-  <li>Android Racer: Download the apk and install it on your android device and play!</li>
-  <li>Noti-ja!: Clone the repository, and run the command ./gradlew run to start the application.</li></ul>
-  
-Please feel free to reach out if you have any questions or feedback.
+<p>
+  I turn real-world problems into dependable software — from backend systems and<br>
+  mobile experiences to integrations, automation and the web.
+</p>
 
-<h2>Contributing</h2>
+<a href="https://sergigtar.dev/">
+  <img alt="Explore the portfolio" src="https://img.shields.io/badge/EXPLORE_THE_PORTFOLIO-0B1220?style=for-the-badge&logo=googlechrome&logoColor=4ADE80">
+</a>
+<img alt="Profile refreshed August 2026" src="https://img.shields.io/badge/REFRESHED-AUGUST_2026-4ADE80?style=for-the-badge&labelColor=0B1220">
 
-<ul><li>Fork the repository and create a new branch for your changes.</li>
-<li>Make your changes and submit a pull request for review.</li>
-<li>Follow the code of conduct.</li></ul>
+</div>
+
+---
+
+### `> profile`
+
+```yaml
+mindset: security-first
+approach: pragmatic, curious, product-aware
+focus:
+  - backend systems and APIs
+  - mobile and product engineering
+  - integrations and automation
+  - secure-by-design delivery
+```
+
+### `> current_focus / 2026`
+
+- Building software where **reliability, maintainability and security** are
+  first-class requirements.
+- Deepening application security, privacy engineering and practical AI-enabled
+  workflows.
+- Contributing high-signal bug reports, reproducible evidence and useful
+  workarounds to open-source projects.
+
+### `> toolbox`
+
+<div align="center">
+
+<img alt="C#" src="https://img.shields.io/badge/C%23-0B1220?style=flat-square&logo=dotnet&logoColor=4ADE80">
+<img alt=".NET" src="https://img.shields.io/badge/.NET-0B1220?style=flat-square&logo=dotnet&logoColor=4ADE80">
+<img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-0B1220?style=flat-square&logo=kotlin&logoColor=4ADE80">
+<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-0B1220?style=flat-square&logo=typescript&logoColor=4ADE80">
+<img alt="Python" src="https://img.shields.io/badge/Python-0B1220?style=flat-square&logo=python&logoColor=4ADE80">
+<img alt="SQL" src="https://img.shields.io/badge/SQL-0B1220?style=flat-square&logo=postgresql&logoColor=4ADE80">
+<br>
+<img alt="Angular" src="https://img.shields.io/badge/Angular-0B1220?style=flat-square&logo=angular&logoColor=4ADE80">
+<img alt="React" src="https://img.shields.io/badge/React-0B1220?style=flat-square&logo=react&logoColor=4ADE80">
+<img alt="Jetpack Compose" src="https://img.shields.io/badge/Jetpack_Compose-0B1220?style=flat-square&logo=jetpackcompose&logoColor=4ADE80">
+<img alt="Azure" src="https://img.shields.io/badge/Azure-0B1220?style=flat-square&logo=microsoftazure&logoColor=4ADE80">
+<img alt="Docker" src="https://img.shields.io/badge/Docker-0B1220?style=flat-square&logo=docker&logoColor=4ADE80">
+<img alt="OWASP" src="https://img.shields.io/badge/OWASP-0B1220?style=flat-square&logo=owasp&logoColor=4ADE80">
+
+</div>
+
+### `> how_i_build`
+
+| 01 · Understand | 02 · Design | 03 · Build | 04 · Harden | 05 · Improve |
+|:--|:--|:--|:--|:--|
+| Find the real constraint | Keep the architecture intentional | Ship the smallest useful slice | Test failure modes and trust boundaries | Observe, learn and iterate |
+
+### `> featured_experience`
+
+<a href="https://sergigtar.dev/"><strong>sergigtar.dev</strong></a> — an
+interactive portfolio designed as a visual world instead of a conventional
+landing page.
+
+<details>
+<summary><strong>Principles I keep close</strong></summary>
+
+- Secure defaults beat security checklists added at the end.
+- Clear interfaces and boring reliability scale better than clever coupling.
+- A useful bug report includes evidence, reproduction steps and a path forward.
+- Good software respects both the person using it and the person maintaining it.
+
+</details>
+
+---
+
+<div align="center">
+  <sub>Build with intent · verify with evidence · leave the system better than you found it</sub>
+</div>
