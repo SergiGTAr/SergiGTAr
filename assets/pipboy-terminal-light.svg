@@ -67,7 +67,7 @@
     <text x="36" y="44" class="label" fill="#007A3D">◆ SERGIGTAR OS // PUBLIC NODE</text>
     <text x="684" y="44" text-anchor="end" class="micro" fill="#416C55">AUG.2026</text>
     <text x="38" y="96" class="micro" fill="#9A6200">SYS://SECURITY_OPERATOR</text>
-    <text x="34" y="157" fill="#102C1E" font-size="52" font-weight="800" letter-spacing="1">SECURITY-FIRST</text>
+    <text x="34" y="157" fill="#102C1E" font-size="51" font-weight="800" letter-spacing="1">SECURITY-FIRST</text>
     <text x="34" y="220" fill="#007A3D" font-size="64" font-weight="800" letter-spacing="2" class="glitch" filter="url(#glow-universal-hero-light)">ENGINEERING</text>
     <path d="M36 237H438" stroke="#007A3D" stroke-width="3"/>
     <g class="body">
