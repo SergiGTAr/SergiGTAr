@@ -281,7 +281,7 @@ def hero_svg(p: Palette, portrait_uri: str) -> str:
 def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
     uid = f"universal-hero-{p.name}"
     security_size = fitted_size("SECURITY-FIRST", 405, 53)
-    engineering_size = fitted_size("ENGINEERING", 405, 64)
+    engineering_size = fitted_size("ENGINEERING", 390, 64)
     wave = waveform(34, 695, 650, 12, 130)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="760" viewBox="0 0 720 760" role="img" aria-labelledby="title-{uid} desc-{uid}">
   <title id="title-{uid}">SergiGTAr tactical security terminal</title>
@@ -298,7 +298,7 @@ def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
     <text x="684" y="44" text-anchor="end" class="micro" fill="{p.muted}">AUG.2026</text>
     <text x="38" y="96" class="micro" fill="{p.warn}">SYS://SECURITY_OPERATOR</text>
     <text x="34" y="157" fill="{p.fg}" font-size="{security_size}" font-weight="800" letter-spacing="1">SECURITY-FIRST</text>
-    <text x="34" y="220" fill="{p.accent}" font-size="{engineering_size}" font-weight="800" letter-spacing="4" class="glitch" filter="url(#glow-{uid})">ENGINEERING</text>
+    <text x="34" y="220" fill="{p.accent}" font-size="{engineering_size}" font-weight="800" letter-spacing="2" class="glitch" filter="url(#glow-{uid})">ENGINEERING</text>
     <path d="M36 237H438" stroke="{p.accent}" stroke-width="3"/>
     <g class="body">
       <g class="boot-1"><text x="38" y="270" fill="{p.accent}">[OK]</text><text x="92" y="270" fill="{p.fg}">trust mapped</text></g>

@@ -68,7 +68,7 @@
     <text x="684" y="44" text-anchor="end" class="micro" fill="#7DCB98">AUG.2026</text>
     <text x="38" y="96" class="micro" fill="#FFCA55">SYS://SECURITY_OPERATOR</text>
     <text x="34" y="157" fill="#E5FFEE" font-size="52" font-weight="800" letter-spacing="1">SECURITY-FIRST</text>
-    <text x="34" y="220" fill="#00FF66" font-size="64" font-weight="800" letter-spacing="4" class="glitch" filter="url(#glow-universal-hero-dark)">ENGINEERING</text>
+    <text x="34" y="220" fill="#00FF66" font-size="64" font-weight="800" letter-spacing="2" class="glitch" filter="url(#glow-universal-hero-dark)">ENGINEERING</text>
     <path d="M36 237H438" stroke="#00FF66" stroke-width="3"/>
     <g class="body">
       <g class="boot-1"><text x="38" y="270" fill="#00FF66">[OK]</text><text x="92" y="270" fill="#E5FFEE">trust mapped</text></g>
