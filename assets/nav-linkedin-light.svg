@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="92" viewBox="0 0 360 92" role="img" aria-labelledby="title-nav-linkedin-light desc-nav-linkedin-light">
+  <title id="title-nav-linkedin-light">PROFESSIONAL LINK</title><desc id="desc-nav-linkedin-light">LINKEDIN</desc>
+  
+    <defs>
+      <linearGradient id="bg-nav-linkedin-light" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#F4F1DF"/>
+        <stop offset="0.55" stop-color="#E7ECD8"/>
+        <stop offset="1" stop-color="#F4F1DF"/>
+      </linearGradient>
+      <radialGradient id="radar-nav-linkedin-light" cx="50%" cy="50%" r="58%">
+        <stop offset="0" stop-color="#007A3D" stop-opacity=".16"/>
+        <stop offset=".55" stop-color="#007A3D" stop-opacity=".04"/>
+        <stop offset="1" stop-color="#007A3D" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="sweep-nav-linkedin-light" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#007A3D" stop-opacity="0"/>
+        <stop offset=".5" stop-color="#007A3D" stop-opacity=".25"/>
+        <stop offset="1" stop-color="#007A3D" stop-opacity="0"/>
+      </linearGradient>
+      <pattern id="grid-nav-linkedin-light" width="30" height="30" patternUnits="userSpaceOnUse">
+        <path d="M30 0H0V30" fill="none" stroke="#B7CDBB" stroke-width="1" opacity=".55"/>
+      </pattern>
+      <pattern id="scan-nav-linkedin-light" width="4" height="4" patternUnits="userSpaceOnUse">
+        <path d="M0 3.5H4" stroke="#C3CEBE" stroke-width="1" opacity=".20"/>
+      </pattern>
+      <filter id="glow-nav-linkedin-light" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="4" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="soft-nav-linkedin-light" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="1.4"/>
+      </filter>
+      
+    </defs>
+    <style>
+      .mono { font-family: Consolas, "SFMono-Regular", Menlo, monospace; }
+      .label { font-size: 15px; font-weight: 700; letter-spacing: 3px; }
+      .micro { font-size: 12px; font-weight: 700; letter-spacing: 1.8px; }
+      .body { font-size: 17px; letter-spacing: .5px; }
+      .scan-sweep { animation: scan-nav-linkedin-light 8s linear infinite; }
+      .pulse { animation: pulse-nav-linkedin-light 3.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .blink { animation: blink-nav-linkedin-light 1.05s steps(1) infinite; }
+      .flow { stroke-dasharray: 12 8; animation: flow-nav-linkedin-light 2.8s linear infinite; }
+      .radar-sweep { animation: rotate-nav-linkedin-light 5.5s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .glitch { animation: glitch-nav-linkedin-light 7s steps(1) infinite; }
+      .boot-1 { animation: boot-nav-linkedin-light .4s .10s both; }
+      .boot-2 { animation: boot-nav-linkedin-light .4s .35s both; }
+      .boot-3 { animation: boot-nav-linkedin-light .4s .60s both; }
+      .boot-4 { animation: boot-nav-linkedin-light .4s .85s both; }
+      @keyframes scan-nav-linkedin-light { from { transform: translateY(-90px); } to { transform: translateY(690px); } }
+      @keyframes pulse-nav-linkedin-light { 0%,100% { opacity:.28; transform:scale(.94); } 50% { opacity:.9; transform:scale(1.04); } }
+      @keyframes blink-nav-linkedin-light { 0%,48% { opacity:1; } 49%,100% { opacity:0; } }
+      @keyframes flow-nav-linkedin-light { to { stroke-dashoffset:-40; } }
+      @keyframes rotate-nav-linkedin-light { to { transform:rotate(360deg); } }
+      @keyframes glitch-nav-linkedin-light { 0%,92%,96%,100% { transform:translate(0); } 93% { transform:translate(2px,-1px); } 94% { transform:translate(-2px,1px); } 95% { transform:translate(1px,0); } }
+      @keyframes boot-nav-linkedin-light { from { opacity:0; transform:translateX(-10px); } to { opacity:1; transform:translateX(0); } }
+      @media (prefers-reduced-motion: reduce) { .scan-sweep,.pulse,.blink,.flow,.radar-sweep,.glitch,.boot-1,.boot-2,.boot-3,.boot-4 { animation:none!important; opacity:1!important; transform:none!important; } }
+    </style>
+    
+  <path d="M15,3 H345 L357,15 V77 L345,89 H15 L3,77 V15 Z" fill="#EEF2E3" stroke="#4E8B67" stroke-width="1.5"/>
+  <path d="M91 13V79" stroke="#B7CDBB"/><circle cx="53" cy="25" r="6" fill="#007A3D"/><path d="M47 39V67M60 67V48C60 38 75 38 75 50V67M32 39V67" fill="none" stroke="#007A3D" stroke-width="4"/>
+  <g class="mono"><text x="109" y="31" class="micro" fill="#416C55">CHANNEL // 02</text><text x="109" y="55" font-size="18" font-weight="800" letter-spacing="1" fill="#102C1E">PROFESSIONAL LINK</text><text x="109" y="74" font-size="11" letter-spacing="1" fill="#007A3D">LINKEDIN</text></g>
+  <path d="M318 34L332 46 318 58" fill="none" stroke="#007A3D" stroke-width="2" class="pulse"/>
+  <path d="M15,3 H345 L357,15 V77 L345,89 H15 L3,77 V15 Z" fill="none" stroke="#007A3D" stroke-width="2" stroke-dasharray="70 300" class="flow"/>
+</svg>
