@@ -37,16 +37,11 @@
   </a>
 </p>
 
-<div align="center">
-
-### `SYS://OPERATOR_BRIEF`
-
-Software engineer moving deeper into **cybersecurity**, combining a security-first mindset with
-product-aware engineering and systems that remain understandable under pressure.
-
-`CLEAR TRUST BOUNDARIES` · `SECURE DEFAULTS` · `REPRODUCIBLE EVIDENCE`
-
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/operator-brief-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/operator-brief-light.svg">
+  <img src="./assets/operator-brief-dark.svg" width="100%" alt="Operator brief: security-first software engineer, clear trust boundaries, secure defaults and reproducible evidence">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/systems-map-dark.svg">
@@ -87,5 +82,5 @@ When I report an issue, I aim to leave maintainers with:
 </picture>
 
 <p align="center">
-  <sub><code>SERGIGTAR OS // PUBLIC NODE // LAST REFRESH: AUGUST 25, 2026</code></sub>
+  <sub><code>SERGIGTAR OS // PUBLIC NODE // LAST REFRESH: AUGUST 26, 2026</code></sub>
 </p>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="360" height="120" viewBox="0 0 360 120" role="img" aria-labelledby="title-universal-nav-portfolio-light desc-universal-nav-portfolio-light">
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="140" viewBox="0 0 360 140" role="img" aria-labelledby="title-universal-nav-portfolio-light desc-universal-nav-portfolio-light">
   <title id="title-universal-nav-portfolio-light">PORTFOLIO</title><desc id="desc-universal-nav-portfolio-light">Responsive navigation control for PORTFOLIO.</desc>
   
     <defs>
@@ -56,9 +56,10 @@
       @media (prefers-reduced-motion: reduce) { .scan-sweep,.pulse,.blink,.flow,.radar-sweep,.glitch,.boot-1,.boot-2,.boot-3,.boot-4 { animation:none!important; opacity:1!important; transform:none!important; } .motion-ball { display:none; } }
     </style>
     
-  <path d="M18,4 H342 L356,18 V102 L342,116 H18 L4,102 V18 Z" fill="#EEF2E3" stroke="#007A3D" stroke-width="2"/>
-  <circle cx="56" cy="60" r="31" fill="none" stroke="#4E8B67" stroke-width="2"/><text x="56" y="70" text-anchor="middle" class="mono" font-size="27" font-weight="800" fill="#007A3D">⌁</text>
-  <g class="mono"><text x="102" y="43" class="micro" fill="#416C55">UPLINK // 01</text><text x="102" y="78" font-size="25" font-weight="800" letter-spacing="1" fill="#102C1E">PORTFOLIO</text></g>
-  <path d="M323 46L338 60 323 74" fill="none" stroke="#007A3D" stroke-width="3" class="pulse"/>
-  <path d="M18,4 H342 L356,18 V102 L342,116 H18 L4,102 V18 Z" fill="none" stroke="#009B50" stroke-width="2" stroke-dasharray="60 320" class="flow"/>
+  <path d="M18,4 H342 L356,18 V122 L342,136 H18 L4,122 V18 Z" fill="#EEF2E3" stroke="#007A3D" stroke-width="2"/>
+  <circle cx="58" cy="70" r="34" fill="none" stroke="#4E8B67" stroke-width="2"/><text x="58" y="81" text-anchor="middle" class="mono" font-size="29" font-weight="800" fill="#007A3D">⌁</text>
+  <g class="mono"><text x="108" y="46" class="micro" fill="#416C55">UPLINK // 01</text><text x="108" y="82" font-size="26" font-weight="800" letter-spacing="1" fill="#102C1E">PORTFOLIO</text></g>
+  <circle class="pulse" cx="290" cy="32" r="4" fill="#007A3D"/><text x="302" y="36" class="micro" fill="#416C55">ONLINE</text>
+  <path d="M322 56L338 70 322 84" fill="none" stroke="#007A3D" stroke-width="3" class="pulse"/>
+  <path d="M18,4 H342 L356,18 V122 L342,136 H18 L4,122 V18 Z" fill="none" stroke="#009B50" stroke-width="2" stroke-dasharray="60 320" class="flow"/>
 </svg>

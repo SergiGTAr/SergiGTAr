@@ -59,7 +59,7 @@
     
   <rect width="720" height="850" fill="url(#bg-universal-systems-light)"/><rect width="720" height="850" fill="url(#grid-universal-systems-light)" opacity=".3"/>
   <path d="M32,8 H688 L712,32 V818 L688,842 H32 L8,818 V32 Z" fill="none" stroke="#007A3D" stroke-width="3"/>
-  <g class="mono"><text x="32" y="52" class="label" fill="#007A3D">◆ ACTIVE MODULES // SYSTEM MAP</text><text x="688" y="52" text-anchor="end" class="micro" fill="#416C55">03 ONLINE</text></g>
+  <g class="mono"><text x="32" y="52" class="label" fill="#007A3D">◆ ACTIVE MODULES // SYSTEM MAP</text><circle class="pulse" cx="600" cy="46" r="4" fill="#007A3D"/><text x="612" y="52" class="micro" fill="#416C55">03 ONLINE</text></g>
   <g>
     <path d="M42,76 H678 L696,94 V284 L678,302 H42 L24,284 V94 Z" fill="#EEF2E3" stroke="#4E8B67" stroke-width="1.5"/>
     <path d="M42,318 H678 L696,336 V526 L678,544 H42 L24,526 V336 Z" fill="#EEF2E3" stroke="#4E8B67" stroke-width="1.5"/>

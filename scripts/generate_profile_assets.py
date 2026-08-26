@@ -250,7 +250,7 @@ def universal_systems_svg(p: Palette) -> str:
   {svg_defs(p, uid)}
   <rect width="720" height="850" fill="url(#bg-{uid})"/><rect width="720" height="850" fill="url(#grid-{uid})" opacity=".3"/>
   <path d="{cut_path(8, 8, 704, 834, 24)}" fill="none" stroke="{p.accent}" stroke-width="3"/>
-  <g class="mono"><text x="32" y="52" class="label" fill="{p.accent}">◆ ACTIVE MODULES // SYSTEM MAP</text><text x="688" y="52" text-anchor="end" class="micro" fill="{p.muted}">03 ONLINE</text></g>
+  <g class="mono"><text x="32" y="52" class="label" fill="{p.accent}">◆ ACTIVE MODULES // SYSTEM MAP</text><circle class="pulse" cx="600" cy="46" r="4" fill="{p.accent}"/><text x="612" y="52" class="micro" fill="{p.muted}">03 ONLINE</text></g>
   <g>
     <path d="{cut_path(24, 76, 672, 226, 18)}" fill="{p.panel}" stroke="{p.line}" stroke-width="1.5"/>
     <path d="{cut_path(24, 318, 672, 226, 18)}" fill="{p.panel}" stroke="{p.line}" stroke-width="1.5"/>
@@ -271,17 +271,52 @@ def universal_systems_svg(p: Palette) -> str:
 """
 
 
+def universal_brief_svg(p: Palette) -> str:
+    uid = f"universal-brief-{p.name}"
+    chips = [
+        ("CLEAR TRUST BOUNDARIES", 32, 236),
+        ("SECURE DEFAULTS", 284, 148),
+        ("REPRODUCIBLE EVIDENCE", 448, 210),
+    ]
+    chip_markup = "".join(
+        f'<path d="{cut_path(x, 226, w, 42, 8)}" fill="none" stroke="{p.line}" stroke-width="1.5"/>'
+        f'<text x="{x + w / 2}" y="252" text-anchor="middle" font-size="15" font-weight="700" letter-spacing="1" fill="{p.accent}">{label}</text>'
+        for label, x, w in chips
+    )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-labelledby="title-{uid} desc-{uid}">
+  <title id="title-{uid}">SergiGTAr operator brief</title>
+  <desc id="desc-{uid}">Security-first software engineer: clear trust boundaries, secure defaults and reproducible evidence.</desc>
+  {svg_defs(p, uid)}
+  <rect width="720" height="300" fill="url(#bg-{uid})"/><rect width="720" height="300" fill="url(#grid-{uid})" opacity=".3"/>
+  <path d="{cut_path(8, 8, 704, 284, 24)}" fill="none" stroke="{p.accent}" stroke-width="3"/>
+  <g class="mono">
+    <text x="32" y="52" class="label" fill="{p.accent}">◆ SYS://OPERATOR_BRIEF</text>
+    <text x="688" y="52" text-anchor="end" class="micro" fill="{p.muted}">AUTH: OPERATOR</text>
+    <text x="32" y="108" font-size="19" fill="{p.fg}">Software engineer moving deeper into cybersecurity,</text>
+    <text x="32" y="140" font-size="19" fill="{p.fg}">combining a security-first mindset with product-aware</text>
+    <text x="32" y="172" font-size="19" fill="{p.fg}">engineering and systems that remain understandable</text>
+    <text x="32" y="204" font-size="19" fill="{p.fg}">under pressure.</text>
+    <rect class="blink" x="189" y="186" width="10" height="18" fill="{p.accent}"/>
+  </g>
+  {chip_markup}
+  <rect class="scan-sweep" x="10" y="-40" width="700" height="80" fill="url(#sweep-{uid})" opacity=".35"/>
+  <rect width="720" height="300" fill="url(#scan-{uid})" opacity=".2" pointer-events="none"/>
+</svg>
+"""
+
+
 def universal_nav_svg(p: Palette, kind: str, code: str, title: str) -> str:
     uid = f"universal-nav-{kind}-{p.name}"
     glyph = {"portfolio": "⌁", "linkedin": "in", "orcid": "iD"}[kind]
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="360" height="120" viewBox="0 0 360 120" role="img" aria-labelledby="title-{uid} desc-{uid}">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="360" height="140" viewBox="0 0 360 140" role="img" aria-labelledby="title-{uid} desc-{uid}">
   <title id="title-{uid}">{esc(title)}</title><desc id="desc-{uid}">Responsive navigation control for {esc(title)}.</desc>
   {svg_defs(p, uid)}
-  <path d="{cut_path(4, 4, 352, 112, 14)}" fill="{p.panel}" stroke="{p.accent}" stroke-width="2"/>
-  <circle cx="56" cy="60" r="31" fill="none" stroke="{p.line}" stroke-width="2"/><text x="56" y="70" text-anchor="middle" class="mono" font-size="27" font-weight="800" fill="{p.accent}">{glyph}</text>
-  <g class="mono"><text x="102" y="43" class="micro" fill="{p.muted}">{esc(code)}</text><text x="102" y="78" font-size="25" font-weight="800" letter-spacing="1" fill="{p.fg}">{esc(title)}</text></g>
-  <path d="M323 46L338 60 323 74" fill="none" stroke="{p.accent}" stroke-width="3" class="pulse"/>
-  <path d="{cut_path(4, 4, 352, 112, 14)}" fill="none" stroke="{p.accent2}" stroke-width="2" stroke-dasharray="60 320" class="flow"/>
+  <path d="{cut_path(4, 4, 352, 132, 14)}" fill="{p.panel}" stroke="{p.accent}" stroke-width="2"/>
+  <circle cx="58" cy="70" r="34" fill="none" stroke="{p.line}" stroke-width="2"/><text x="58" y="81" text-anchor="middle" class="mono" font-size="29" font-weight="800" fill="{p.accent}">{glyph}</text>
+  <g class="mono"><text x="108" y="46" class="micro" fill="{p.muted}">{esc(code)}</text><text x="108" y="82" font-size="26" font-weight="800" letter-spacing="1" fill="{p.fg}">{esc(title)}</text></g>
+  <circle class="pulse" cx="290" cy="32" r="4" fill="{p.accent}"/><text x="302" y="36" class="micro" fill="{p.muted}">ONLINE</text>
+  <path d="M322 56L338 70 322 84" fill="none" stroke="{p.accent}" stroke-width="3" class="pulse"/>
+  <path d="{cut_path(4, 4, 352, 132, 14)}" fill="none" stroke="{p.accent2}" stroke-width="2" stroke-dasharray="60 320" class="flow"/>
 </svg>
 """
 
@@ -327,6 +362,7 @@ def main() -> None:
         # discards width conditions. A single tall composition therefore scales
         # reliably in both the desktop README column and the mobile profile view.
         generated[f"pipboy-terminal-{palette.name}.svg"] = universal_hero_svg(palette, portrait_uri)
+        generated[f"operator-brief-{palette.name}.svg"] = universal_brief_svg(palette)
         generated[f"systems-map-{palette.name}.svg"] = universal_systems_svg(palette)
         generated[f"nav-portfolio-{palette.name}.svg"] = universal_nav_svg(palette, "portfolio", "UPLINK // 01", "PORTFOLIO")
         generated[f"nav-linkedin-{palette.name}.svg"] = universal_nav_svg(palette, "linkedin", "CHANNEL // 02", "LINKEDIN")
