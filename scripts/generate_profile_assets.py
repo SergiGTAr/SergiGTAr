@@ -157,6 +157,7 @@ def svg_defs(p: Palette, uid: str, portrait_uri: str | None = None) -> str:
 {portrait_block}    </defs>
     <style>
       .mono {{ font-family: Consolas, "SFMono-Regular", Menlo, monospace; }}
+      text {{ font-family: Consolas, "SFMono-Regular", Menlo, monospace; }}
       .label {{ font-size: 15px; font-weight: 700; letter-spacing: 3px; }}
       .micro {{ font-size: 12px; font-weight: 700; letter-spacing: 1.8px; }}
       .body {{ font-size: 17px; letter-spacing: .5px; }}
