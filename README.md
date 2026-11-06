@@ -37,6 +37,18 @@
   </a>
 </p>
 
+### `> research_archive`
+
+| Published | Research | CVE records |
+|:--|:--|:--|
+| `2026-11-05` | **MatchPoint · TPC Software** | **7 published** |
+
+Security findings in the Android application and API, coordinated with **INCIBE-CERT**.
+The advisory credits Sergi García Tárraga as the discoverer. The findings cover access
+control, credential handling, local SQL injection, TLS validation and information exposure.
+
+[Read the research](https://sergigtar.dev/investigacion/matchpoint/) · [INCIBE advisory](https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/operator-brief-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/operator-brief-light.svg">
