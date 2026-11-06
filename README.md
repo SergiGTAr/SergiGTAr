@@ -37,6 +37,34 @@
   </a>
 </p>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/operator-brief-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/operator-brief-light.svg">
+  <img src="./assets/operator-brief-dark.svg" width="100%" alt="Operator brief: security-first software engineer, clear trust boundaries, secure defaults and reproducible evidence">
+</picture>
+
+### `> engineering_log`
+
+I build business software, Android applications and integrations between systems.
+My day-to-day work spans C#/.NET, APIs and ERP/CRM platforms. Computer Engineering
+graduate from UOC; currently studying the Master's in Cybersecurity and Privacy.
+
+| Period | Work |
+|:--|:--|
+| `Feb 2023 — present` | **Bandalux** · eBA product configurator, Android application and B2B portal; Dynamics 365, SharePoint and API integrations. |
+| `Jan 2021 — Feb 2023` | **Seidor** · SAP Business One add-ons in C#, ERP integrations, deployment and production support. |
+
+### `> projects`
+
+| Project | What I built |
+|:--|:--|
+| **Forma** | Android fitness app with real-time pose analysis using ML Kit. Final degree project, 2026. [Project presentation](https://es.linkedin.com/posts/sergigtar_graduacion-ingenieria-esfuerzo-activity-7425966284174958592-ojWN). |
+| **AES** | Full-stack social network built with the MEAN stack. |
+| **Android Racer** | Android game developed in Kotlin. |
+| **Noti-JA!** | News application built with Jetpack Compose. |
+
+[Explore the portfolio](https://sergigtar.dev/#proyectos) · [Experience and CV](https://sergigtar.dev/cv)
+
 ### `> research_archive`
 
 | Published | Research | CVE records |
@@ -48,12 +76,6 @@ The advisory credits Sergi García Tárraga as the discoverer. The findings cove
 control, credential handling, local SQL injection, TLS validation and information exposure.
 
 [Read the research](https://sergigtar.dev/investigacion/matchpoint/) · [INCIBE advisory](https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint)
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/operator-brief-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/operator-brief-light.svg">
-  <img src="./assets/operator-brief-dark.svg" width="100%" alt="Operator brief: security-first software engineer, clear trust boundaries, secure defaults and reproducible evidence">
-</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/systems-map-dark.svg">
