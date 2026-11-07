@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-labelledby="title-universal-brief-light desc-universal-brief-light">
   <title id="title-universal-brief-light">SergiGTAr operator brief</title>
-  <desc id="desc-universal-brief-light">Security-first software engineer: clear trust boundaries, secure defaults and reproducible evidence.</desc>
+  <desc id="desc-universal-brief-light">Software developer since 2021: C#, .NET, API integrations and Android apps. Currently studying for a master's in Cybersecurity and Privacy.</desc>
   
     <defs>
       <linearGradient id="bg-universal-brief-light" x1="0" y1="0" x2="1" y2="1">
@@ -63,13 +63,13 @@
   <g class="mono">
     <text x="32" y="52" class="label" fill="#007A3D">◆ SYS://OPERATOR_BRIEF</text>
     <text x="688" y="52" text-anchor="end" class="micro" fill="#416C55">AUTH: OPERATOR</text>
-    <text x="32" y="108" font-size="19" fill="#102C1E">Software engineer moving deeper into cybersecurity,</text>
-    <text x="32" y="140" font-size="19" fill="#102C1E">combining a security-first mindset with product-aware</text>
-    <text x="32" y="172" font-size="19" fill="#102C1E">engineering and systems that remain understandable</text>
-    <text x="32" y="204" font-size="19" fill="#102C1E">under pressure.</text>
+    <text x="32" y="108" font-size="19" fill="#102C1E">Software developer since 2021: C#, .NET and APIs.</text>
+    <text x="32" y="140" font-size="19" fill="#102C1E">Android apps and Dynamics 365 integrations.</text>
+    <text x="32" y="172" font-size="19" fill="#102C1E">Master's in Cybersecurity and Privacy:</text>
+    <text x="32" y="204" font-size="19" fill="#102C1E">in progress.</text>
     <rect class="blink" x="189" y="186" width="10" height="18" fill="#007A3D"/>
   </g>
-  <path d="M40,226 H260 L268,234 V260 L260,268 H40 L32,260 V234 Z" fill="none" stroke="#4E8B67" stroke-width="1.5"/><text x="150.0" y="252" text-anchor="middle" font-size="15" font-weight="700" letter-spacing="1" fill="#007A3D">CLEAR TRUST BOUNDARIES</text><path d="M292,226 H424 L432,234 V260 L424,268 H292 L284,260 V234 Z" fill="none" stroke="#4E8B67" stroke-width="1.5"/><text x="358.0" y="252" text-anchor="middle" font-size="15" font-weight="700" letter-spacing="1" fill="#007A3D">SECURE DEFAULTS</text><path d="M456,226 H650 L658,234 V260 L650,268 H456 L448,260 V234 Z" fill="none" stroke="#4E8B67" stroke-width="1.5"/><text x="553.0" y="252" text-anchor="middle" font-size="15" font-weight="700" letter-spacing="1" fill="#007A3D">REPRODUCIBLE EVIDENCE</text>
+  <path d="M40,226 H260 L268,234 V260 L260,268 H40 L32,260 V234 Z" fill="none" stroke="#4E8B67" stroke-width="1.5"/><text x="150.0" y="252" text-anchor="middle" font-size="15" font-weight="700" letter-spacing="1" fill="#007A3D">BUSINESS SOFTWARE</text><path d="M292,226 H424 L432,234 V260 L424,268 H292 L284,260 V234 Z" fill="none" stroke="#4E8B67" stroke-width="1.5"/><text x="358.0" y="252" text-anchor="middle" font-size="15" font-weight="700" letter-spacing="1" fill="#007A3D">ANDROID APPS</text><path d="M456,226 H650 L658,234 V260 L650,268 H456 L448,260 V234 Z" fill="none" stroke="#4E8B67" stroke-width="1.5"/><text x="553.0" y="252" text-anchor="middle" font-size="15" font-weight="700" letter-spacing="1" fill="#007A3D">SECURITY RESEARCH</text>
   <rect class="scan-sweep" x="10" y="-40" width="700" height="80" fill="url(#sweep-universal-brief-light)" opacity=".35"/>
   <rect width="720" height="300" fill="url(#scan-universal-brief-light)" opacity=".2" pointer-events="none"/>
 </svg>

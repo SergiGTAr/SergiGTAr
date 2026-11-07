@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="760" viewBox="0 0 720 760" role="img" aria-labelledby="title-universal-hero-light desc-universal-hero-light">
-  <title id="title-universal-hero-light">SergiGTAr tactical security terminal</title>
-  <desc id="desc-universal-hero-light">Responsive Pip-Boy inspired profile terminal with operator portrait, security-first engineering mission and live system modules.</desc>
+  <title id="title-universal-hero-light">SergiGTAr software development terminal</title>
+  <desc id="desc-universal-hero-light">Pip-Boy inspired profile terminal with Sergi's portrait, C# and .NET development, Android projects, API integrations and application security research.</desc>
   
     <defs>
       <linearGradient id="bg-universal-hero-light" x1="0" y1="0" x2="1" y2="1">
@@ -67,13 +67,13 @@
   <g class="mono">
     <text x="36" y="44" class="label" fill="#007A3D">◆ SERGIGTAR OS // PUBLIC NODE</text>
     <text x="684" y="44" text-anchor="end" class="micro" fill="#416C55">NOV.2026</text>
-    <text x="38" y="96" class="micro" fill="#9A6200">SYS://SECURITY_OPERATOR</text>
-    <text x="34" y="157" fill="#102C1E" font-size="51" font-weight="800" letter-spacing="1">SECURITY-FIRST</text>
+    <text x="38" y="96" class="micro" fill="#9A6200">SYS://SOFTWARE_ENGINEER</text>
+    <text x="34" y="157" fill="#102C1E" font-size="51" font-weight="800" letter-spacing="1">SOFTWARE</text>
     <text x="34" y="220" fill="#007A3D" font-size="64" font-weight="800" letter-spacing="2" class="glitch" filter="url(#glow-universal-hero-light)">ENGINEERING</text>
     <path d="M36 237H438" stroke="#007A3D" stroke-width="3"/>
     <g class="body">
-      <g class="boot-1"><text x="38" y="270" fill="#007A3D">[OK]</text><text x="92" y="270" fill="#102C1E">trust mapped</text></g>
-      <g class="boot-2"><text x="38" y="300" fill="#007A3D">[OK]</text><text x="92" y="300" fill="#102C1E">defaults hardened</text></g>
+      <g class="boot-1"><text x="38" y="270" fill="#007A3D">[OK]</text><text x="92" y="270" fill="#102C1E">C# / .NET / APIs</text></g>
+      <g class="boot-2"><text x="38" y="300" fill="#007A3D">[OK]</text><text x="92" y="300" fill="#102C1E">Android / Kotlin</text></g>
     </g>
   </g>
   <g>
@@ -84,25 +84,25 @@
     <path d="M581 72V308M463 190H699" stroke="#4E8B67" opacity=".38"/>
   </g>
   <g class="mono">
-    <text x="36" y="365" class="label" fill="#9A6200">ACTIVE SYSTEMS // 04</text>
+    <text x="36" y="365" class="label" fill="#9A6200">WORK AREAS // 04</text>
     <g class="body">
       <path d="M48,390 H336 L350,404 V478 L336,492 H48 L34,478 V404 Z" fill="#F4F1DF" fill-opacity=".45" stroke="#4E8B67"/>
-      <text x="55" y="425" class="micro" fill="#416C55">APPSEC</text><text x="55" y="463" fill="#007A3D">ACTIVE</text>
-      <text x="198" y="425" class="micro" fill="#416C55">PRIVACY</text><text x="198" y="463" fill="#007A3D">ENFORCED</text>
+      <text x="55" y="425" class="micro" fill="#416C55">BACKEND</text><text x="55" y="463" fill="#007A3D">.NET/C#</text>
+      <text x="198" y="425" class="micro" fill="#416C55">ANDROID</text><text x="198" y="463" fill="#007A3D">KOTLIN</text>
       <path d="M384,390 H672 L686,404 V478 L672,492 H384 L370,478 V404 Z" fill="#F4F1DF" fill-opacity=".45" stroke="#4E8B67"/>
-      <text x="391" y="425" class="micro" fill="#416C55">RESEARCH</text><text x="391" y="463" fill="#9A6200">ONGOING</text>
-      <text x="534" y="425" class="micro" fill="#416C55">UPLINK</text><text x="534" y="463" fill="#007A3D">READY</text>
+      <text x="391" y="425" class="micro" fill="#416C55">APIs</text><text x="391" y="463" fill="#9A6200">ERP/CRM</text>
+      <text x="534" y="425" class="micro" fill="#416C55">APPSEC</text><text x="534" y="463" fill="#007A3D">RESEARCH</text>
       <path d="M48,512 H672 L686,526 V606 L672,620 H48 L34,606 V526 Z" fill="#F4F1DF" fill-opacity=".45" stroke="#4E8B67"/>
-      <text x="55" y="550" class="micro" fill="#416C55">COMMAND</text>
-      <text x="55" y="588" fill="#102C1E" font-size="20">&gt; build --harden --verify</text>
+      <text x="55" y="550" class="micro" fill="#416C55">PROJECT</text>
+      <text x="55" y="588" fill="#102C1E" font-size="20">&gt; Forma / Android / ML Kit</text>
       <rect class="blink" x="356" y="568" width="12" height="22" fill="#007A3D"/>
       <text x="656" y="550" text-anchor="end" class="micro" fill="#416C55">OPERATOR</text>
-      <text x="656" y="588" text-anchor="end" fill="#007A3D" font-size="18">SGT-06 // AUTH</text>
+      <text x="656" y="588" text-anchor="end" fill="#007A3D" font-size="18">SERGI GARCÍA</text>
     </g>
   </g>
   <polyline points="34.0,696.8 39.0,698.2 44.1,698.1 49.1,698.1 54.2,698.6 59.2,698.1 64.2,697.0 69.3,697.4 74.3,699.1 79.3,699.4 84.4,697.5 89.4,695.1 94.5,693.5 99.5,691.4 104.5,688.7 109.6,687.6 114.6,689.5 119.7,692.0 124.7,692.5 129.7,692.4 134.8,693.4 139.8,694.4 144.9,693.9 149.9,694.0 154.9,697.3 160.0,702.1 165.0,704.4 170.0,703.9 175.1,703.3 180.1,702.4 185.2,698.7 190.2,693.6 195.2,691.6 200.3,693.0 205.3,693.5 210.4,691.3 215.4,689.3 220.4,688.8 225.5,686.7 230.5,682.8 235.6,682.1 240.6,687.2 245.6,693.8 250.7,697.6 255.7,700.3 260.7,704.2 265.8,706.0 270.8,703.1 275.9,699.6 280.9,700.9 285.9,704.6 291.0,705.1 296.0,702.7 301.1,701.1 306.1,698.9 311.1,692.0 316.2,682.9 321.2,679.0 326.2,681.3 331.3,684.0 336.3,684.9 341.4,687.8 346.4,692.5 351.4,693.8 356.5,690.9 361.5,690.3 366.6,695.7 371.6,702.2 376.6,705.6 381.7,708.1 386.7,711.8 391.8,712.0 396.8,705.4 401.8,697.2 406.9,693.8 411.9,693.6 416.9,691.8 422.0,689.5 427.0,690.2 432.1,691.3 437.1,687.8 442.1,681.9 447.2,680.3 452.2,683.8 457.3,687.7 462.3,690.8 467.3,696.2 472.4,702.8 477.4,705.3 482.4,702.6 487.5,700.2 492.5,700.9 497.6,701.9 502.6,700.9 507.6,700.6 512.7,702.1 517.7,701.6 522.8,696.7 527.8,690.7 532.8,687.8 537.9,687.1 542.9,686.2 548.0,686.3 553.0,689.3 558.0,693.0 563.1,693.8 568.1,692.4 573.1,692.5 578.2,694.5 583.2,695.9 588.3,696.8 593.3,699.2 598.3,702.4 603.4,703.2 608.4,701.0 613.5,698.4 618.5,697.0 623.5,695.6 628.6,693.5 633.6,692.6 638.7,693.6 643.7,694.3 648.7,692.9 653.8,691.0 658.8,690.4 663.8,690.5 668.9,690.3 673.9,690.9 679.0,693.5 684.0,696.8" fill="none" stroke="#007A3D" stroke-width="2" class="flow"/>
   <g class="motion-ball"><circle r="5" fill="#9A6200"><animateMotion dur="3s" repeatCount="indefinite" path="M34.0,696.8 L39.0,698.2 L44.1,698.1 L49.1,698.1 L54.2,698.6 L59.2,698.1 L64.2,697.0 L69.3,697.4 L74.3,699.1 L79.3,699.4 L84.4,697.5 L89.4,695.1 L94.5,693.5 L99.5,691.4 L104.5,688.7 L109.6,687.6 L114.6,689.5 L119.7,692.0 L124.7,692.5 L129.7,692.4 L134.8,693.4 L139.8,694.4 L144.9,693.9 L149.9,694.0 L154.9,697.3 L160.0,702.1 L165.0,704.4 L170.0,703.9 L175.1,703.3 L180.1,702.4 L185.2,698.7 L190.2,693.6 L195.2,691.6 L200.3,693.0 L205.3,693.5 L210.4,691.3 L215.4,689.3 L220.4,688.8 L225.5,686.7 L230.5,682.8 L235.6,682.1 L240.6,687.2 L245.6,693.8 L250.7,697.6 L255.7,700.3 L260.7,704.2 L265.8,706.0 L270.8,703.1 L275.9,699.6 L280.9,700.9 L285.9,704.6 L291.0,705.1 L296.0,702.7 L301.1,701.1 L306.1,698.9 L311.1,692.0 L316.2,682.9 L321.2,679.0 L326.2,681.3 L331.3,684.0 L336.3,684.9 L341.4,687.8 L346.4,692.5 L351.4,693.8 L356.5,690.9 L361.5,690.3 L366.6,695.7 L371.6,702.2 L376.6,705.6 L381.7,708.1 L386.7,711.8 L391.8,712.0 L396.8,705.4 L401.8,697.2 L406.9,693.8 L411.9,693.6 L416.9,691.8 L422.0,689.5 L427.0,690.2 L432.1,691.3 L437.1,687.8 L442.1,681.9 L447.2,680.3 L452.2,683.8 L457.3,687.7 L462.3,690.8 L467.3,696.2 L472.4,702.8 L477.4,705.3 L482.4,702.6 L487.5,700.2 L492.5,700.9 L497.6,701.9 L502.6,700.9 L507.6,700.6 L512.7,702.1 L517.7,701.6 L522.8,696.7 L527.8,690.7 L532.8,687.8 L537.9,687.1 L542.9,686.2 L548.0,686.3 L553.0,689.3 L558.0,693.0 L563.1,693.8 L568.1,692.4 L573.1,692.5 L578.2,694.5 L583.2,695.9 L588.3,696.8 L593.3,699.2 L598.3,702.4 L603.4,703.2 L608.4,701.0 L613.5,698.4 L618.5,697.0 L623.5,695.6 L628.6,693.5 L633.6,692.6 L638.7,693.6 L643.7,694.3 L648.7,692.9 L653.8,691.0 L658.8,690.4 L663.8,690.5 L668.9,690.3 L673.9,690.9 L679.0,693.5 L684.0,696.8"/></circle></g>
-  <g class="mono micro"><text x="34" y="731" fill="#416C55">VERIFY BEFORE TRUST</text><text x="686" y="731" text-anchor="end" fill="#007A3D">SERGIGTAR.DEV // ENTER</text></g>
+  <g class="mono micro"><text x="34" y="731" fill="#416C55">SOFTWARE SINCE 2021</text><text x="686" y="731" text-anchor="end" fill="#007A3D">SERGIGTAR.DEV // ENTER</text></g>
   <rect class="scan-sweep" x="22" y="-30" width="676" height="90" fill="url(#sweep-universal-hero-light)" opacity=".45"/>
   <rect width="720" height="760" fill="url(#scan-universal-hero-light)" opacity=".25" pointer-events="none"/>
 </svg>

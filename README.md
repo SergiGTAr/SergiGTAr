@@ -8,7 +8,7 @@
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/pipboy-terminal-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="./assets/pipboy-terminal-light.svg">
-      <img src="./assets/pipboy-terminal-dark.svg" width="100%" alt="SergiGTAr tactical security engineering terminal: security-first engineering, secure defaults, evidence-driven work and portfolio uplink">
+      <img src="./assets/pipboy-terminal-dark.svg" width="100%" alt="SergiGTAr: software engineering with C#, .NET, Android and APIs; application security research">
     </picture>
   </a>
 </p>
@@ -40,12 +40,12 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/operator-brief-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/operator-brief-light.svg">
-  <img src="./assets/operator-brief-dark.svg" width="100%" alt="Operator brief: security-first software engineer, clear trust boundaries, secure defaults and reproducible evidence">
+  <img src="./assets/operator-brief-dark.svg" width="100%" alt="Software developer since 2021, working with C#, .NET, Android and integrations; master's in Cybersecurity and Privacy in progress">
 </picture>
 
 <p align="center">
-  Portfolio: <a href="https://sergigtar.dev/" lang="es">Español</a> · <a href="https://sergigtar.dev/en/" lang="en">English</a>
-  · CV: <a href="https://sergigtar.dev/cv" lang="es">ES</a> / <a href="https://sergigtar.dev/en/cv" lang="en">EN</a>
+  Portfolio: <a href="https://sergigtar.dev/" lang="es">Español</a> · <a href="https://sergigtar.dev/en/" lang="en">English</a> · <a href="https://sergigtar.dev/ca/" lang="ca">Català</a>
+  · CV: <a href="https://sergigtar.dev/cv" lang="es">ES</a> / <a href="https://sergigtar.dev/en/cv" lang="en">EN</a> / <a href="https://sergigtar.dev/ca/cv" lang="ca">CA</a>
 </p>
 
 ### `> engineering_log`
@@ -76,16 +76,14 @@ graduate from UOC; currently studying the Master's in Cybersecurity and Privacy.
 |:--|:--|:--|
 | `2026-11-05` | **MatchPoint · TPC Software** | **7 published** |
 
-Security findings in the Android application and API, coordinated with **INCIBE-CERT**.
-The advisory credits Sergi García Tárraga as the discoverer. The findings cover access
-control, credential handling, local SQL injection, TLS validation and information exposure.
+I reported vulnerabilities in the Android application and API to **INCIBE-CERT**, which coordinated their disclosure. They cover access control, credential handling, local SQL injection, TLS validation and information exposure.
 
-[Read the research (ES)](https://sergigtar.dev/investigacion/matchpoint/) · [English version](https://sergigtar.dev/en/research/matchpoint/) · [INCIBE advisory](https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint)
+[Read the research (ES)](https://sergigtar.dev/investigacion/matchpoint/) · [English version](https://sergigtar.dev/en/research/matchpoint/) · [Versió en català](https://sergigtar.dev/ca/recerca/matchpoint/) · [INCIBE advisory](https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/systems-map-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/systems-map-light.svg">
-  <img src="./assets/systems-map-dark.svg" width="100%" alt="Active system map: application security, secure architecture, privacy-aware engineering, defensive automation, reproducible research, engineering toolchain and responsible open-source protocol">
+  <img src="./assets/systems-map-dark.svg" width="100%" alt="Development projects, engineering tools and MatchPoint application security research">
 </picture>
 
 <details>
@@ -117,7 +115,7 @@ When I report an issue, I aim to leave maintainers with:
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-status-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/footer-status-light.svg">
-  <img src="./assets/footer-status-dark.svg" width="100%" alt="Public profile status: learn, build, harden, share and disclose responsibly">
+  <img src="./assets/footer-status-dark.svg" width="100%" alt="Software and Android development, API integrations and application security research">
 </picture>
 
 <p align="center">

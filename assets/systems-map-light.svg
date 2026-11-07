@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="850" viewBox="0 0 720 850" role="img" aria-labelledby="title-universal-systems-light desc-universal-systems-light">
   <title id="title-universal-systems-light">SergiGTAr active system map</title>
-  <desc id="desc-universal-systems-light">Responsive readout of cybersecurity focus, engineering tools and the responsible open-source protocol.</desc>
+  <desc id="desc-universal-systems-light">Development work, engineering tools and the published MatchPoint application security research coordinated with INCIBE-CERT.</desc>
   
     <defs>
       <linearGradient id="bg-universal-systems-light" x1="0" y1="0" x2="1" y2="1">
@@ -60,21 +60,21 @@
     
   <rect width="720" height="850" fill="url(#bg-universal-systems-light)"/><rect width="720" height="850" fill="url(#grid-universal-systems-light)" opacity=".3"/>
   <path d="M32,8 H688 L712,32 V818 L688,842 H32 L8,818 V32 Z" fill="none" stroke="#007A3D" stroke-width="3"/>
-  <g class="mono"><text x="32" y="52" class="label" fill="#007A3D">◆ ACTIVE MODULES // SYSTEM MAP</text><circle class="pulse" cx="600" cy="46" r="4" fill="#007A3D"/><text x="612" y="52" class="micro" fill="#416C55">03 ONLINE</text></g>
+  <g class="mono"><text x="32" y="52" class="label" fill="#007A3D">◆ ACTIVE MODULES // SYSTEM MAP</text><circle class="pulse" cx="600" cy="46" r="4" fill="#007A3D"/><text x="612" y="52" class="micro" fill="#416C55">03 AREAS</text></g>
   <g>
     <path d="M42,76 H678 L696,94 V284 L678,302 H42 L24,284 V94 Z" fill="#EEF2E3" stroke="#4E8B67" stroke-width="1.5"/>
     <path d="M42,318 H678 L696,336 V526 L678,544 H42 L24,526 V336 Z" fill="#EEF2E3" stroke="#4E8B67" stroke-width="1.5"/>
     <path d="M42,560 H678 L696,578 V768 L678,786 H42 L24,768 V578 Z" fill="#EEF2E3" stroke="#4E8B67" stroke-width="1.5"/>
   </g>
   <g class="mono">
-    <text x="50" y="116" class="label" fill="#9A6200">01 // SECURITY TRACK</text><text x="50" y="145" class="micro" fill="#416C55">CURRENT VECTOR</text>
-    <g class="body" fill="#102C1E"><text x="50" y="184">◆ application security</text><text x="50" y="218">◆ secure architecture</text><text x="50" y="252">◆ privacy-aware engineering</text><text x="385" y="184">◆ defensive automation</text><text x="385" y="218">◆ threat-aware development</text><text x="385" y="252">◆ reproducible research</text></g>
+    <text x="50" y="116" class="label" fill="#9A6200">01 // DEVELOPMENT</text><text x="50" y="145" class="micro" fill="#416C55">WORK AND PROJECTS</text>
+    <g class="body" fill="#102C1E"><text x="50" y="184">◆ business software</text><text x="50" y="218">◆ Android apps</text><text x="50" y="252">◆ API integrations</text><text x="385" y="184">◆ Forma / ML Kit</text><text x="385" y="218">◆ SAP B1 add-ons</text><text x="385" y="252">◆ Dynamics 365</text></g>
     <text x="50" y="358" class="label" fill="#9A6200">02 // ENGINEERING CORE</text><text x="50" y="387" class="micro" fill="#416C55">INTEROPERABLE TOOLCHAIN</text>
     <g class="body"><text x="50" y="430" fill="#007A3D">.NET / C#</text><text x="235" y="430" fill="#102C1E">PYTHON</text><text x="420" y="430" fill="#007A3D">TYPESCRIPT</text><text x="50" y="478" fill="#102C1E">KOTLIN</text><text x="235" y="478" fill="#007A3D">SQL</text><text x="420" y="478" fill="#102C1E">DOCKER / AZURE</text></g>
     <path d="M50 448H670" stroke="#4E8B67" opacity=".5"/>
-    <text x="50" y="600" class="label" fill="#9A6200">03 // OSS PROTOCOL</text><text x="50" y="629" class="micro" fill="#416C55">LEAVE A SAFE TRAIL</text>
-    <g class="body"><text x="50" y="675" fill="#007A3D">01</text><text x="102" y="675" fill="#102C1E">REPRODUCE</text><text x="370" y="675" fill="#007A3D">02</text><text x="422" y="675" fill="#102C1E">SANITISE</text><text x="50" y="727" fill="#007A3D">03</text><text x="102" y="727" fill="#102C1E">DOCUMENT</text><text x="370" y="727" fill="#007A3D">04</text><text x="422" y="727" fill="#102C1E">IMPROVE</text></g>
+    <text x="50" y="600" class="label" fill="#9A6200">03 // SECURITY RESEARCH</text><text x="50" y="629" class="micro" fill="#416C55">MATCHPOINT / NOV 2026</text>
+    <g class="body"><text x="50" y="675" fill="#007A3D">01</text><text x="102" y="675" fill="#102C1E">API + ANDROID</text><text x="370" y="675" fill="#007A3D">02</text><text x="422" y="675" fill="#102C1E">7 FINDINGS</text><text x="50" y="727" fill="#007A3D">03</text><text x="102" y="727" fill="#102C1E">INCIBE-CERT</text><text x="370" y="727" fill="#007A3D">04</text><text x="422" y="727" fill="#102C1E">PUBLIC DOSSIER</text></g>
   </g>
-  <g class="mono micro"><text x="28" y="821" fill="#416C55">ASSUME LESS · EVIDENCE &gt; VIBES</text><text x="692" y="821" text-anchor="end" fill="#007A3D">SECURE BY DEFAULT</text></g>
+  <g class="mono micro"><text x="28" y="821" fill="#416C55">BUSINESS SOFTWARE + ANDROID</text><text x="692" y="821" text-anchor="end" fill="#007A3D">SERGIGTAR.DEV</text></g>
   <rect class="scan-sweep" x="10" y="-40" width="700" height="80" fill="url(#sweep-universal-systems-light)" opacity=".35"/><rect width="720" height="850" fill="url(#scan-universal-systems-light)" opacity=".2"/>
 </svg>
