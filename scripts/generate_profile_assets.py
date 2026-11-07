@@ -185,12 +185,12 @@ def svg_defs(p: Palette, uid: str, portrait_uri: str | None = None) -> str:
 
 def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
     uid = f"universal-hero-{p.name}"
-    security_size = fitted_size("SECURITY-FIRST", 405, 53)
+    security_size = 51  # Preserve the approved headline size when its text changes.
     engineering_size = fitted_size("ENGINEERING", 390, 64)
     wave = waveform(34, 695, 650, 12, 130)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="760" viewBox="0 0 720 760" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">SergiGTAr tactical security terminal</title>
-  <desc id="desc-{uid}">Responsive Pip-Boy inspired profile terminal with operator portrait, security-first engineering mission and live system modules.</desc>
+  <title id="title-{uid}">SergiGTAr software development terminal</title>
+  <desc id="desc-{uid}">Pip-Boy inspired profile terminal with Sergi's portrait, C# and .NET development, Android projects, API integrations and application security research.</desc>
   {svg_defs(p, uid)}
   <defs><clipPath id="portrait-{uid}"><path d="{cut_path(487, 87, 188, 207, 22)}"/></clipPath></defs>
   <rect width="720" height="760" fill="url(#bg-{uid})"/>
@@ -201,13 +201,13 @@ def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
   <g class="mono">
     <text x="36" y="44" class="label" fill="{p.accent}">◆ SERGIGTAR OS // PUBLIC NODE</text>
     <text x="684" y="44" text-anchor="end" class="micro" fill="{p.muted}">{MONTH_TAG}</text>
-    <text x="38" y="96" class="micro" fill="{p.warn}">SYS://SECURITY_OPERATOR</text>
-    <text x="34" y="157" fill="{p.fg}" font-size="{security_size}" font-weight="800" letter-spacing="1">SECURITY-FIRST</text>
+    <text x="38" y="96" class="micro" fill="{p.warn}">SYS://SOFTWARE_ENGINEER</text>
+    <text x="34" y="157" fill="{p.fg}" font-size="{security_size}" font-weight="800" letter-spacing="1">SOFTWARE</text>
     <text x="34" y="220" fill="{p.accent}" font-size="{engineering_size}" font-weight="800" letter-spacing="2" class="glitch" filter="url(#glow-{uid})">ENGINEERING</text>
     <path d="M36 237H438" stroke="{p.accent}" stroke-width="3"/>
     <g class="body">
-      <g class="boot-1"><text x="38" y="270" fill="{p.accent}">[OK]</text><text x="92" y="270" fill="{p.fg}">trust mapped</text></g>
-      <g class="boot-2"><text x="38" y="300" fill="{p.accent}">[OK]</text><text x="92" y="300" fill="{p.fg}">defaults hardened</text></g>
+      <g class="boot-1"><text x="38" y="270" fill="{p.accent}">[OK]</text><text x="92" y="270" fill="{p.fg}">C# / .NET / APIs</text></g>
+      <g class="boot-2"><text x="38" y="300" fill="{p.accent}">[OK]</text><text x="92" y="300" fill="{p.fg}">Android / Kotlin</text></g>
     </g>
   </g>
   <g>
@@ -218,25 +218,25 @@ def universal_hero_svg(p: Palette, portrait_uri: str) -> str:
     <path d="M581 72V308M463 190H699" stroke="{p.line}" opacity=".38"/>
   </g>
   <g class="mono">
-    <text x="36" y="365" class="label" fill="{p.warn}">ACTIVE SYSTEMS // 04</text>
+    <text x="36" y="365" class="label" fill="{p.warn}">WORK AREAS // 04</text>
     <g class="body">
       <path d="{cut_path(34, 390, 316, 102, 14)}" fill="{p.bg}" fill-opacity=".45" stroke="{p.line}"/>
-      <text x="55" y="425" class="micro" fill="{p.muted}">APPSEC</text><text x="55" y="463" fill="{p.accent}">ACTIVE</text>
-      <text x="198" y="425" class="micro" fill="{p.muted}">PRIVACY</text><text x="198" y="463" fill="{p.accent}">ENFORCED</text>
+      <text x="55" y="425" class="micro" fill="{p.muted}">BACKEND</text><text x="55" y="463" fill="{p.accent}">.NET/C#</text>
+      <text x="198" y="425" class="micro" fill="{p.muted}">ANDROID</text><text x="198" y="463" fill="{p.accent}">KOTLIN</text>
       <path d="{cut_path(370, 390, 316, 102, 14)}" fill="{p.bg}" fill-opacity=".45" stroke="{p.line}"/>
-      <text x="391" y="425" class="micro" fill="{p.muted}">RESEARCH</text><text x="391" y="463" fill="{p.warn}">ONGOING</text>
-      <text x="534" y="425" class="micro" fill="{p.muted}">UPLINK</text><text x="534" y="463" fill="{p.accent}">READY</text>
+      <text x="391" y="425" class="micro" fill="{p.muted}">APIs</text><text x="391" y="463" fill="{p.warn}">ERP/CRM</text>
+      <text x="534" y="425" class="micro" fill="{p.muted}">APPSEC</text><text x="534" y="463" fill="{p.accent}">RESEARCH</text>
       <path d="{cut_path(34, 512, 652, 108, 14)}" fill="{p.bg}" fill-opacity=".45" stroke="{p.line}"/>
-      <text x="55" y="550" class="micro" fill="{p.muted}">COMMAND</text>
-      <text x="55" y="588" fill="{p.fg}" font-size="20">&gt; build --harden --verify</text>
+      <text x="55" y="550" class="micro" fill="{p.muted}">PROJECT</text>
+      <text x="55" y="588" fill="{p.fg}" font-size="20">&gt; Forma / Android / ML Kit</text>
       <rect class="blink" x="356" y="568" width="12" height="22" fill="{p.accent}"/>
       <text x="656" y="550" text-anchor="end" class="micro" fill="{p.muted}">OPERATOR</text>
-      <text x="656" y="588" text-anchor="end" fill="{p.accent}" font-size="18">SGT-06 // AUTH</text>
+      <text x="656" y="588" text-anchor="end" fill="{p.accent}" font-size="18">SERGI GARCÍA</text>
     </g>
   </g>
   <polyline points="{wave}" fill="none" stroke="{p.accent}" stroke-width="2" class="flow"/>
   <g class="motion-ball"><circle r="5" fill="{p.warn}"><animateMotion dur="3s" repeatCount="indefinite" path="{wave_path(wave)}"/></circle></g>
-  <g class="mono micro"><text x="34" y="731" fill="{p.muted}">VERIFY BEFORE TRUST</text><text x="686" y="731" text-anchor="end" fill="{p.accent}">SERGIGTAR.DEV // ENTER</text></g>
+  <g class="mono micro"><text x="34" y="731" fill="{p.muted}">SOFTWARE SINCE 2021</text><text x="686" y="731" text-anchor="end" fill="{p.accent}">SERGIGTAR.DEV // ENTER</text></g>
   <rect class="scan-sweep" x="22" y="-30" width="676" height="90" fill="url(#sweep-{uid})" opacity=".45"/>
   <rect width="720" height="760" fill="url(#scan-{uid})" opacity=".25" pointer-events="none"/>
 </svg>
@@ -247,26 +247,26 @@ def universal_systems_svg(p: Palette) -> str:
     uid = f"universal-systems-{p.name}"
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="850" viewBox="0 0 720 850" role="img" aria-labelledby="title-{uid} desc-{uid}">
   <title id="title-{uid}">SergiGTAr active system map</title>
-  <desc id="desc-{uid}">Responsive readout of cybersecurity focus, engineering tools and the responsible open-source protocol.</desc>
+  <desc id="desc-{uid}">Development work, engineering tools and the published MatchPoint application security research coordinated with INCIBE-CERT.</desc>
   {svg_defs(p, uid)}
   <rect width="720" height="850" fill="url(#bg-{uid})"/><rect width="720" height="850" fill="url(#grid-{uid})" opacity=".3"/>
   <path d="{cut_path(8, 8, 704, 834, 24)}" fill="none" stroke="{p.accent}" stroke-width="3"/>
-  <g class="mono"><text x="32" y="52" class="label" fill="{p.accent}">◆ ACTIVE MODULES // SYSTEM MAP</text><circle class="pulse" cx="600" cy="46" r="4" fill="{p.accent}"/><text x="612" y="52" class="micro" fill="{p.muted}">03 ONLINE</text></g>
+  <g class="mono"><text x="32" y="52" class="label" fill="{p.accent}">◆ ACTIVE MODULES // SYSTEM MAP</text><circle class="pulse" cx="600" cy="46" r="4" fill="{p.accent}"/><text x="612" y="52" class="micro" fill="{p.muted}">03 AREAS</text></g>
   <g>
     <path d="{cut_path(24, 76, 672, 226, 18)}" fill="{p.panel}" stroke="{p.line}" stroke-width="1.5"/>
     <path d="{cut_path(24, 318, 672, 226, 18)}" fill="{p.panel}" stroke="{p.line}" stroke-width="1.5"/>
     <path d="{cut_path(24, 560, 672, 226, 18)}" fill="{p.panel}" stroke="{p.line}" stroke-width="1.5"/>
   </g>
   <g class="mono">
-    <text x="50" y="116" class="label" fill="{p.warn}">01 // SECURITY TRACK</text><text x="50" y="145" class="micro" fill="{p.muted}">CURRENT VECTOR</text>
-    <g class="body" fill="{p.fg}"><text x="50" y="184">◆ application security</text><text x="50" y="218">◆ secure architecture</text><text x="50" y="252">◆ privacy-aware engineering</text><text x="385" y="184">◆ defensive automation</text><text x="385" y="218">◆ threat-aware development</text><text x="385" y="252">◆ reproducible research</text></g>
+    <text x="50" y="116" class="label" fill="{p.warn}">01 // DEVELOPMENT</text><text x="50" y="145" class="micro" fill="{p.muted}">WORK AND PROJECTS</text>
+    <g class="body" fill="{p.fg}"><text x="50" y="184">◆ business software</text><text x="50" y="218">◆ Android apps</text><text x="50" y="252">◆ API integrations</text><text x="385" y="184">◆ Forma / ML Kit</text><text x="385" y="218">◆ SAP B1 add-ons</text><text x="385" y="252">◆ Dynamics 365</text></g>
     <text x="50" y="358" class="label" fill="{p.warn}">02 // ENGINEERING CORE</text><text x="50" y="387" class="micro" fill="{p.muted}">INTEROPERABLE TOOLCHAIN</text>
     <g class="body"><text x="50" y="430" fill="{p.accent}">.NET / C#</text><text x="235" y="430" fill="{p.fg}">PYTHON</text><text x="420" y="430" fill="{p.accent}">TYPESCRIPT</text><text x="50" y="478" fill="{p.fg}">KOTLIN</text><text x="235" y="478" fill="{p.accent}">SQL</text><text x="420" y="478" fill="{p.fg}">DOCKER / AZURE</text></g>
     <path d="M50 448H670" stroke="{p.line}" opacity=".5"/>
-    <text x="50" y="600" class="label" fill="{p.warn}">03 // OSS PROTOCOL</text><text x="50" y="629" class="micro" fill="{p.muted}">LEAVE A SAFE TRAIL</text>
-    <g class="body"><text x="50" y="675" fill="{p.accent}">01</text><text x="102" y="675" fill="{p.fg}">REPRODUCE</text><text x="370" y="675" fill="{p.accent}">02</text><text x="422" y="675" fill="{p.fg}">SANITISE</text><text x="50" y="727" fill="{p.accent}">03</text><text x="102" y="727" fill="{p.fg}">DOCUMENT</text><text x="370" y="727" fill="{p.accent}">04</text><text x="422" y="727" fill="{p.fg}">IMPROVE</text></g>
+    <text x="50" y="600" class="label" fill="{p.warn}">03 // SECURITY RESEARCH</text><text x="50" y="629" class="micro" fill="{p.muted}">MATCHPOINT / NOV 2026</text>
+    <g class="body"><text x="50" y="675" fill="{p.accent}">01</text><text x="102" y="675" fill="{p.fg}">API + ANDROID</text><text x="370" y="675" fill="{p.accent}">02</text><text x="422" y="675" fill="{p.fg}">7 FINDINGS</text><text x="50" y="727" fill="{p.accent}">03</text><text x="102" y="727" fill="{p.fg}">INCIBE-CERT</text><text x="370" y="727" fill="{p.accent}">04</text><text x="422" y="727" fill="{p.fg}">PUBLIC DOSSIER</text></g>
   </g>
-  <g class="mono micro"><text x="28" y="821" fill="{p.muted}">ASSUME LESS · EVIDENCE &gt; VIBES</text><text x="692" y="821" text-anchor="end" fill="{p.accent}">SECURE BY DEFAULT</text></g>
+  <g class="mono micro"><text x="28" y="821" fill="{p.muted}">BUSINESS SOFTWARE + ANDROID</text><text x="692" y="821" text-anchor="end" fill="{p.accent}">SERGIGTAR.DEV</text></g>
   <rect class="scan-sweep" x="10" y="-40" width="700" height="80" fill="url(#sweep-{uid})" opacity=".35"/><rect width="720" height="850" fill="url(#scan-{uid})" opacity=".2"/>
 </svg>
 """
@@ -275,9 +275,9 @@ def universal_systems_svg(p: Palette) -> str:
 def universal_brief_svg(p: Palette) -> str:
     uid = f"universal-brief-{p.name}"
     chips = [
-        ("CLEAR TRUST BOUNDARIES", 32, 236),
-        ("SECURE DEFAULTS", 284, 148),
-        ("REPRODUCIBLE EVIDENCE", 448, 210),
+        ("BUSINESS SOFTWARE", 32, 236),
+        ("ANDROID APPS", 284, 148),
+        ("SECURITY RESEARCH", 448, 210),
     ]
     chip_markup = "".join(
         f'<path d="{cut_path(x, 226, w, 42, 8)}" fill="none" stroke="{p.line}" stroke-width="1.5"/>'
@@ -286,17 +286,17 @@ def universal_brief_svg(p: Palette) -> str:
     )
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-labelledby="title-{uid} desc-{uid}">
   <title id="title-{uid}">SergiGTAr operator brief</title>
-  <desc id="desc-{uid}">Security-first software engineer: clear trust boundaries, secure defaults and reproducible evidence.</desc>
+  <desc id="desc-{uid}">Software developer since 2021: C#, .NET, API integrations and Android apps. Currently studying for a master's in Cybersecurity and Privacy.</desc>
   {svg_defs(p, uid)}
   <rect width="720" height="300" fill="url(#bg-{uid})"/><rect width="720" height="300" fill="url(#grid-{uid})" opacity=".3"/>
   <path d="{cut_path(8, 8, 704, 284, 24)}" fill="none" stroke="{p.accent}" stroke-width="3"/>
   <g class="mono">
     <text x="32" y="52" class="label" fill="{p.accent}">◆ SYS://OPERATOR_BRIEF</text>
     <text x="688" y="52" text-anchor="end" class="micro" fill="{p.muted}">AUTH: OPERATOR</text>
-    <text x="32" y="108" font-size="19" fill="{p.fg}">Software engineer moving deeper into cybersecurity,</text>
-    <text x="32" y="140" font-size="19" fill="{p.fg}">combining a security-first mindset with product-aware</text>
-    <text x="32" y="172" font-size="19" fill="{p.fg}">engineering and systems that remain understandable</text>
-    <text x="32" y="204" font-size="19" fill="{p.fg}">under pressure.</text>
+    <text x="32" y="108" font-size="19" fill="{p.fg}">Software developer since 2021: C#, .NET and APIs.</text>
+    <text x="32" y="140" font-size="19" fill="{p.fg}">Android apps and Dynamics 365 integrations.</text>
+    <text x="32" y="172" font-size="19" fill="{p.fg}">Master's in Cybersecurity and Privacy:</text>
+    <text x="32" y="204" font-size="19" fill="{p.fg}">in progress.</text>
     <rect class="blink" x="189" y="186" width="10" height="18" fill="{p.accent}"/>
   </g>
   {chip_markup}
@@ -326,12 +326,12 @@ def universal_footer_svg(p: Palette) -> str:
     uid = f"universal-footer-{p.name}"
     wave = waveform(34, 92, 652, 11, 130)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="720" height="180" viewBox="0 0 720 180" role="img" aria-labelledby="title-{uid} desc-{uid}">
-  <title id="title-{uid}">SergiGTAr public profile status</title><desc id="desc-{uid}">Public profile online: learn, build, harden, share and disclose responsibly.</desc>
+  <title id="title-{uid}">SergiGTAr public profile status</title><desc id="desc-{uid}">Software developer working with C#, .NET, Android and APIs, with application security research coordinated with INCIBE-CERT.</desc>
   {svg_defs(p, uid)}
   <path d="{cut_path(8, 8, 704, 164, 20)}" fill="{p.panel}" stroke="{p.line}" stroke-width="2"/>
-  <g class="mono"><text x="34" y="42" class="micro" fill="{p.muted}">PUBLIC PROFILE // STATUS ONLINE</text><text x="34" y="72" font-size="20" font-weight="800" letter-spacing="2" fill="{p.accent}">LEARN · BUILD · HARDEN · SHARE</text></g>
+  <g class="mono"><text x="34" y="42" class="micro" fill="{p.muted}">SERGIGTAR // SOFTWARE DEVELOPER</text><text x="34" y="72" font-size="20" font-weight="800" letter-spacing="2" fill="{p.accent}">SOFTWARE / ANDROID / APIs</text></g>
   <polyline points="{wave}" fill="none" stroke="{p.accent}" stroke-width="2" class="flow"/><g class="motion-ball"><circle r="5" fill="{p.warn}"><animateMotion dur="3.2s" repeatCount="indefinite" path="{wave_path(wave)}"/></circle></g>
-  <g class="mono"><text x="34" y="135" class="micro" fill="{p.muted}">SANITISED PUBLIC OUTPUT</text><text x="686" y="135" text-anchor="end" font-size="16" font-weight="800" letter-spacing="2" fill="{p.fg}">DISCLOSE RESPONSIBLY</text><text x="686" y="158" text-anchor="end" class="micro" fill="{p.accent}">NO TRACKERS // NO VIEW COUNTERS</text></g>
+  <g class="mono"><text x="34" y="135" class="micro" fill="{p.muted}">APPLICATION SECURITY RESEARCH</text><text x="686" y="135" text-anchor="end" font-size="16" font-weight="800" letter-spacing="2" fill="{p.fg}">INCIBE-CERT / 2026</text><text x="686" y="158" text-anchor="end" class="micro" fill="{p.accent}">SERGIGTAR.DEV / ES · EN · CA</text></g>
 </svg>
 """
 
