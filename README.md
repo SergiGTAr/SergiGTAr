@@ -43,6 +43,11 @@
   <img src="./assets/operator-brief-dark.svg" width="100%" alt="Operator brief: security-first software engineer, clear trust boundaries, secure defaults and reproducible evidence">
 </picture>
 
+<p align="center">
+  Portfolio: <a href="https://sergigtar.dev/" lang="es">Español</a> · <a href="https://sergigtar.dev/en/" lang="en">English</a>
+  · CV: <a href="https://sergigtar.dev/cv" lang="es">ES</a> / <a href="https://sergigtar.dev/en/cv" lang="en">EN</a>
+</p>
+
 ### `> engineering_log`
 
 I build business software, Android applications and integrations between systems.
@@ -75,7 +80,7 @@ Security findings in the Android application and API, coordinated with **INCIBE-
 The advisory credits Sergi García Tárraga as the discoverer. The findings cover access
 control, credential handling, local SQL injection, TLS validation and information exposure.
 
-[Read the research](https://sergigtar.dev/investigacion/matchpoint/) · [INCIBE advisory](https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint)
+[Read the research (ES)](https://sergigtar.dev/investigacion/matchpoint/) · [English version](https://sergigtar.dev/en/research/matchpoint/) · [INCIBE advisory](https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/systems-map-dark.svg">
@@ -116,5 +121,5 @@ When I report an issue, I aim to leave maintainers with:
 </picture>
 
 <p align="center">
-  <sub><code>SERGIGTAR OS // PUBLIC NODE // LAST REFRESH: NOVEMBER 6, 2026</code></sub>
+  <sub><code>SERGIGTAR OS // PUBLIC NODE // LAST REFRESH: NOVEMBER 7, 2026</code></sub>
 </p>
